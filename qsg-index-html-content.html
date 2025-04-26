@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<title>I-DEVIATOR - Quick Start Guide</title>
+		<link
+			rel="stylesheet"
+			href="css/main.css?ver=1.2" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="images/favicon-16x16.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="images/favicon-32x32.png" />
+	</head>
+
+	<body class="sidebar-hide">
+		<header class="header">
+			<div class="header-left-wrapper">
+				<a href="https://www.i-deviator.cz/">
+					<svg
+						id="logo"
+						viewBox="0 0 240 52"
+						fill="currentColor">
+						<use href="/images/sprite/sprite.svg#logo"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="greetings-wrapper">
+				<span class="greetings">👋 Welcome Vazha Chkimikocha! ⚓</span>
+			</div>
+			<div class="header-right-wrapper">
+				<div>
+					<input
+						type="checkbox"
+						class="theme-checkbox"
+						id="themeToggle" />
+					<label
+						for="themeToggle"
+						class="theme-checkbox-label">
+						<svg
+							height="1rem"
+							width="1rem"
+							viewBox="0 0 512 512">
+							<use href="/images/sprite/sprite.svg#moon"></use>
+						</svg>
+						<svg
+							fill="#ffe928"
+							height="1rem"
+							width="1rem"
+							viewBox="0 0 457.32 457.32"
+							xml:space="preserve">
+							<use href="/images/sprite/sprite.svg#sun"></use>
+						</svg>
+						<span class="ball"></span>
+					</label>
+				</div>
+			</div>
+		</header>
+
+		<div id="wrap">
+			<div class="sidebar-toggleButton-wrapper">
+				<button id="sidebar-toggleButton">
+					<svg
+						id="arrowIcon"
+						width="53"
+						height="58"
+						viewBox="0 0 53 58"
+						fill="currentColor">
+						<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+					</svg>
+
+					<span>Hide Sidebar</span>
+				</button>
+			</div>
+			<div id="sidebar">
+				<ul class="main-sidebar-list">
+					<li class="sidebar-item">
+						<div class="side-bar__main-topic-wrapper">
+							<a
+								href="#start"
+								class="side-bar__main-topic first_main_sidebar_link active"
+								>Getting started</a
+							>
+							<button class="buttonPlus">+</button>
+						</div>
+						<ul class="side-bar__sub-topic get-start-sidebar-dropDown">
+							<li class="active">
+								<a href="#about">About <span class="id">I-Deviator</span></a>
+							</li>
+							<li><a href="#launch">How to launch</a></li>
+
+							<li><a href="#translation">Instant translation</a></li>
+							<li><a href="#interface">Interface</a></li>
+							<li><a href="#authorization">Authorization</a></li>
+							<li><a href="#profile">Profile</a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-item">
+						<div class="side-bar__main-topic-wrapper">
+							<a
+								href="#mb-management-board"
+								class="side-bar__main-topic"
+								>Management Board</a
+							>
+							<button class="buttonPlus">+</button>
+						</div>
+						<ul class="side-bar__sub-topic mb-management-board">
+							<li>
+								<a href="#mb-main-screen"
+									>Main Screen of the Management Board</a
+								>
+							</li>
+							<li><a href="#mb-fleet-tab">Fleet Tab</a></li>
+							<li><a href="#mb-vessel-block">Vessel Information Block</a></li>
+							<li><a href="#mb-vessel-card">Vessel Card</a></li>
+							<li><a href="#mb-card-expiry-dates">Certificates Tab</a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-item">
+						<div class="side-bar__main-topic-wrapper">
+							<a
+								href="#adjustment"
+								class="side-bar__main-topic second_main_sidebar_link"
+								>Magnetic Compass Adjustment Manual</a
+							>
+							<button class="buttonPlus">+</button>
+						</div>
+						<ul class="side-bar__sub-topic">
+							<li><a href="#general-info">General information</a></li>
+							<li><a href="#get-started">Required data</a></li>
+							<li><a href="#history">Compass Adjustment section</a></li>
+							<li><a href="#new-request">Start of procedure</a></li>
+							<li><a href="#chat">Chat window</a></li>
+							<li><a href="#anomaly">Magnetic anomaly zone</a></li>
+							<li><a href="#vessel">Vessel and compass information</a></li>
+							<li><a href="#correctors">Correctors</a></li>
+							<li><a href="#manoeuvres">Manoeuvres</a></li>
+							<li><a href="#instructions">Instructions</a></li>
+							<li><a href="#deviation-card">Deviation card</a></li>
+							<li><a href="#expert">Chat with an expert</a></li>
+							<li><a href="#adjustment-FAQ">F.A.Q</a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<div class="side-bar__main-topic-wrapper">
+							<a
+								href="#logbook"
+								class="side-bar__main-topic"
+								>Compass Error Log book Manual</a
+							>
+							<button class="buttonPlus">+</button>
+						</div>
+						<ul class="side-bar__sub-topic logbook">
+							<li>
+								<a href="#logbook-screen">Compass Error Log Book section</a>
+							</li>
+							<li>
+								<a href="#logbook-highlight"
+									>Highlighting of increased values</a
+								>
+							</li>
+							<li>
+								<a href="#logbook-data-management">Data Management Tab</a>
+							</li>
+							<li>
+								<a href="#logbook-adding">Adding a record to the logbook</a>
+							</li>
+							<li><a href="#logbook-editing">Editing logbook record</a></li>
+							<li>
+								<a href="#logbook-searching">Searching and filtering data</a>
+							</li>
+							<li><a href="#logbook-exporting">Exporting logbook data</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a
+							class="side-bar__main-topic"
+							href="#tips"
+							>Tips and tricks</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="quick-start-guide">
+					<div class="nav-btn-wrapper">
+						<button class="backToStart-btn">
+							<div class="logout-tooltip-text">Back To Start</div>
+							<svg
+								id="arrowUp"
+								width="53"
+								height="58"
+								viewBox="0 0 53 58"
+								fill="currentColor">
+								<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+							</svg>
+							<svg
+								id="arrowUp"
+								width="53"
+								height="58"
+								viewBox="0 0 53 58"
+								fill="currentColor">
+								<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+							</svg>
+						</button>
+
+						<button class="previous-btn">
+							<svg
+								id="arrowUp"
+								width="53"
+								height="58"
+								viewBox="0 0 53 58"
+								fill="currentColor">
+								<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+							</svg>
+						</button>
+						<button class="next-btn">
+							<svg
+								id="arrowDown"
+								width="53"
+								height="58"
+								viewBox="0 0 53 58"
+								fill="currentColor">
+								<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+							</svg>
+						</button>
+					</div>
+					<div id="start"></div>
+
+					<section
+						class="section"
+						id="about">
+						<div class="start">
+							<h2 class="first-tag">Getting started ▶️</h2>
+						</div>
+						<div class="title-line">
+							<h3 class=""><span>About I-Deviator</span></h3>
+						</div>
+						<div class="about-logo-wrapper">
+							<svg
+								id="logo"
+								viewBox="0 0 240 52"
+								fill="currentColor"
+								class="">
+								<use href="/images/sprite/sprite.svg#logo"></use>
+							</svg>
+						</div>
+						<p>
+							<span class="id">I-Deviator</span> is a web-based solution for
+							navigational equipment on ships. <br />
+							You can learn more about <span class="id">I-Deviator</span> by
+							visiting
+							<a href="https://www.i-deviator.cz">www.i-deviator.cz</a>
+						</p>
+						<img
+							loading="lazy"
+							src="images/i-deviator-cz.png"
+							alt="" />
+						<div
+							class="img-wrapper"
+							data-aspect-width="388"
+							data-aspect-height="83">
+							<img
+								loading="lazy"
+								src="images/i-deviator-cz.png"
+								alt="" />
+							<div class="img-skeleton"></div>
+						</div>
+
+						<!-- <div
+						 width="388"
+							height="83"
+							class="image-container"
+							data-aspect-width="388"
+							data-aspect-height="83">
+							<div class="skeleton"></div>
+							<img
+								data-src="images/i-deviator-cz.png"
+								alt=""
+								loading="lazy"
+								class="lazy-image" />
+						</div> -->
+
+						<p>
+							Watch our
+							<a
+								target="_blank"
+								href="https://www.i-deviator.cz/wp-content/uploads/video/i-deviator_video.mp4"
+								>informational video</a
+							>
+							for an in-depth understanding of how
+							<span class="id">I-Deviator</span> evolves Magnetic Compass
+							Adjustment.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="launch">
+						<div class="title-line">
+							<h3><span>How to launch</span></h3>
+						</div>
+						<p>
+							Launch your browser and navigate to
+							<a
+								target="_blank"
+								href="https://ideviator.com"
+								>https://ideviator.com</a
+							>
+						</p>
+						<img
+							loading="lazy"
+							src="images/ideviator-com.png"
+							alt="" />
+
+						<!-- <div class="img-wrapper">
+							<img
+								loading="lazy"
+								src="images/i-deviator-czs.png"
+								width="388"
+								height="83"
+								alt="" />
+							<div class="img-skeleton"></div>
+						</div> -->
+
+						<p class="note">
+							Ensure your browser is updated to the latest version (If logging
+							fails in the initially selected default browser, try access in
+							using Microsoft Edge browser for better compatibility).
+						</p>
+						<strong>If you encounter any issues accessing the site:</strong>
+						<ol>
+							<li>
+								Contact your satellite internet provider and request them to add
+								the domains *.ideviator.com and *.i-deviator.cz to their trusted
+								list.
+							</li>
+							<li>
+								Inform about the problem to our technical support at
+								<a href="mailto:support@i-deviator.cz">support@i-deviator.cz</a
+								>.
+							</li>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="translation">
+						<div class="title-line">
+							<h3><span>Instant translation</span></h3>
+						</div>
+						<p>
+							Default I-Deviator software language is English. We strongly
+							recommend using default language to ensure the accurate completion
+							of the procedure with the highest level of precision. If you
+							experience any difficulties understanding the instructions
+							provided in English, you may utilise the translation feature to
+							convert the guidance into your native language. Please note that
+							while this function is available for convenience, it is advisable
+							to refer to the original English version for the most reliable
+							results.
+						</p>
+
+						<p class="info">
+							To use this translation feature, we also recommend using Google
+							Chrome.
+						</p>
+
+						<p class="note">
+							A stable internet connection is also required, preferably with a
+							speed of at least 1 megabit per second. On slower connections,
+							applying the translation may take some time, potentially up to
+							several minutes. If the translation is not applied after an
+							extended period or if you encounter visual issues related to slow
+							internet speeds, try refreshing the page in your browser.
+						</p>
+
+						<h4>For instant translation</h4>
+
+						<p>
+							1. While using the I-Deviator, right-click with your mouse on a
+							blank field to display the dropdown menu.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/tr-right-click.jpg"
+							alt="" />
+
+						<p>
+							2. Choose option - translate to (your default language). On the
+							right upper corner will appear menu with default language.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/tr-menu.jpg"
+							alt="" />
+
+						<p>
+							3. If you need to translate into another language, click on three
+							dots – choose option <b>Choose another language</b>
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/tr-three-dots.jpg"
+							alt="" />
+
+						<p>
+							4. In appeared language list choose language to which you want to
+							translate text.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/tr-menu.jpg"
+							alt="" />
+
+						<p>5. Click button <b>Translate</b>.</p>
+
+						<img
+							loading="lazy"
+							src="images/tr-button.jpg"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="interface">
+						<div class="title-line">
+							<h3><span>Interface</span></h3>
+						</div>
+						<p>
+							The application interface is divided into two functional areas:
+						</p>
+						<ol>
+							<li>Sidebar.</li>
+							<li>Main area.</li>
+						</ol>
+						<p>
+							In the sidebar, you'll find the application control elements, such
+							as:
+						</p>
+						<ul class="none">
+							<li>
+								1. A sidebar minimization toggle for convenience on devices with
+								small screen resolutions or when enlarging the application
+								display scale.<br />
+								<img
+									loading="lazy"
+									src="images/hide-sidebar.png"
+									alt="" />
+							</li>
+							<li>
+								2. A dark to light mode switch. The choice of mode does not
+								affect the functionality of
+								<span class="id">I-Deviator</span>.<br />
+								<img
+									loading="lazy"
+									src="images/mode-switch.png"
+									alt="" />
+							</li>
+						</ul>
+						<p>
+							Additionally, after successful authorization, the sidebar will
+							display:
+						</p>
+						<ul class="none">
+							<li>
+								3. A list of the three most recent requests for adjustment of
+								deviation.<br />
+								<img
+									loading="lazy"
+									src="images/sidebar-history.png"
+									alt="" />
+							</li>
+							<li>
+								4. A button to go to the Compass Error Log Book section.<br />
+								<img
+									loading="lazy"
+									src="images/sidebar-logbook.png"
+									alt="" />
+							</li>
+							<li>
+								5. A button to go to the Magnetic Compass Adjustment section.<br />
+								<img
+									loading="lazy"
+									src="images/sidebar-adjustment.png"
+									alt="" />
+							</li>
+							<li>
+								6. A button to access the account profile to update information
+								about the captain and vessel, account details, and license.<br />
+								<img
+									loading="lazy"
+									src="images/sidebar-profile.png"
+									alt="" />
+							</li>
+							<li>
+								7. A logout button.<br />
+								<img
+									loading="lazy"
+									src="images/logout.png"
+									alt="" />
+							</li>
+						</ul>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="authorization">
+						<div class="title-line">
+							<h3><span>Authorization</span></h3>
+						</div>
+						<p>
+							To access the features of <span class="id">I-Deviator</span>, you
+							need to log into the system using provided credentials.
+						</p>
+						<img
+							loading="lazy"
+							src="images/login-form.jpg"
+							alt="" />
+						<p class="note">Note: email and password are case-sensitive.</p>
+						<p>
+							After entering your credentials, you can set the 'Remember me'
+							switch to the active position to avoid entering your details every
+							time you launch the application.
+						</p>
+						<img
+							loading="lazy"
+							src="images/remember-me.jpg"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="profile">
+						<div class="title-line">
+							<h3><span>Profile</span></h3>
+						</div>
+						<p>
+							To go to your profile, click the 'Profile settings' button in the
+							sidebar.
+						</p>
+						<img
+							loading="lazy"
+							src="images/sidebar-profile.png"
+							alt="" />
+						<p>
+							In your profile, you can enter/change the details of the current
+							ship's captain, upload a photo, check if the IMO number of the
+							ship is correctly listed, change your account password, and
+							manually enter the license key if necessary.
+						</p>
+						<img
+							loading="lazy"
+							src="images/profile-form.png"
+							alt="" />
+						<p class="info">
+							When changing your password, notify the responsible person in your
+							company accordingly about the changes made.<br />
+							If you encounter any problems with logging into
+							<span class="id">I-Deviator</span>, write to technical support at
+							<a href="mailto:support@i-deviator.cz">support@i-deviator.cz</a>.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+					<section id="mb-management-board">
+						<div class="content-mainTitle-wrapper">
+							<h2>Management Board 🚢</h2>
+						</div>
+						<p>
+							The <strong>Management Board</strong> is an administrative section
+							designed for company managers to monitor the status of a fleet
+							using the I-Deviator solution. This section contains:
+						</p>
+						<ul>
+							<li>
+								Review the history of
+								<strong>Magnetic Compass Adjustment</strong> procedures,
+							</li>
+							<li>
+								Access electronic
+								<strong>Compass Error Log Book</strong> records for each fleet
+								vessel in one place.
+							</li>
+						</ul>
+						<p>The <strong>Management Board</strong> analyzes data to:</p>
+						<ul>
+							<li>
+								Identify problematic areas in the parameters of the magnetic
+								compass and gyrocompass,
+							</li>
+							<li>
+								Indicate of non-compliance record-keeping of the
+								<strong>Compass Error Log Book</strong> by the crew,
+							</li>
+							<li>
+								Calculate the validity period of a vessel's
+								<strong>Deviation Card</strong> and notify about its upcoming
+								expiration.
+							</li>
+						</ul>
+						<p>
+							Upon successful login to your account, you will be automatically
+							redirected to the <strong>Management Board</strong>. If you
+							navigate to another section or need to return to the main screen
+							of the <strong>Management Board</strong>, you can do so by
+							clicking the corresponding button on the left side of the screen.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-sidebar.png"
+							alt="Management Board button" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="mb-main-screen">
+						<div class="title-line">
+							<h3><span>Main Screen of the Management Board</span></h3>
+						</div>
+						<p>
+							The main screen serves as the starting point for monitoring the
+							fleet using the I-Deviator solution. From here, you can navigate
+							to other parts of the Management Board as well as internal screens
+							containing data entered by vessel crews in their accounts. This
+							approach maximizes access to all available information without
+							requiring additional logins or risking unintended changes using a
+							vessel's account.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/mb-managemet-board.png"
+							alt="Management Board" />
+
+						<div class="title-line">
+							<h3><span>Management Toolbar</span></h3>
+						</div>
+						<p>
+							For straightforward and convenient navigation through the
+							<strong>Management Board</strong> and internal screens, the
+							<strong>Management Toolbar</strong> is always located at the top
+							of the page. The toolbar displays the following:
+						</p>
+						<ul>
+							<li>
+								Information about the current screen, highlighted as an active
+								tab with the screen name,
+							</li>
+							<li>
+								Other tabs, allowing navigation to different screens by clicking
+								on them,
+							</li>
+							<li>
+								A <strong>Go Back</strong> button for returning to the previous
+								screen.
+							</li>
+						</ul>
+
+						<img
+							loading="lazy"
+							src="images/mb-managemet-toolbar-1.png"
+							alt="Management Toolbar" />
+
+						<p>
+							When you are on the main screen, the active tab is
+							<strong>Fleet</strong>, which displays a list of vessels in the
+							company's fleet that use I-Deviator. Additionally, there is a tab
+							labeled <strong>Certificates</strong>. Clicking on this tab will
+							take you to a screen with a convenient list of the fleet, sorted
+							by the expiration dates of their deviation cards.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-managemet-toolbar-2.png"
+							alt="Management Toolbar" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="mb-fleet-tab">
+						<div class="title-line">
+							<h3><span>Fleet Tab</span></h3>
+						</div>
+						<p>
+							The <strong>Fleet</strong> tab displays a list of the vessels
+							sorted alphabetically. Favorite vessels always displayed at the
+							top of the list.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-fleet-list.png"
+							alt="Fleet list" />
+
+						<div class="title-line">
+							<h3><span>Search Function</span></h3>
+						</div>
+						<p>
+							To quickly find a specific vessel by name or IMO number, use the
+							search panel displayed above the fleet list. Enter your query and
+							press <strong>Enter</strong> or click the
+							<strong>Search</strong> button.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-search.png"
+							alt="Search" />
+						<p>
+							To reset the search results, click the <strong>Cross</strong> icon
+							next to the <strong>Search</strong> button.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-search-cancel.png"
+							alt="Reset search" />
+
+						<div class="title-line">
+							<h3><span>Favorites Function</span></h3>
+						</div>
+						<p>
+							You can add a vessel to your favorites by clicking the
+							<strong>Star</strong> icon next to its thumbnail. The marked
+							vessel will be moved to the favorites list, which is always
+							displayed at the top of the fleet list.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-add-favorite.png"
+							alt="Adding to favorites" />
+						<p>
+							Use the <strong>My Ships</strong> toggle switch to hide unmarked
+							vessels from the list.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-my-ships.png"
+							alt="My Ships" />
+						<p>
+							To remove a vessel from the list of favourites, click on the
+							<strong>Yellow Star</strong> icon.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-remove-favorite.png"
+							alt="Remove from favorites" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="mb-vessel-block">
+						<div class="title-line">
+							<h3><span>Vessel Information Block</span></h3>
+						</div>
+						<p>
+							By default, all vessels in the fleet list are displayed as blocks
+							containing key information. In the folded state, the following
+							information and functions are available:
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-vessel-collapsed-block.png"
+							alt="Vessel collapsed block" />
+						<ul>
+							<li>Add or remove the vessel from your favorites list.</li>
+							<li>A thumbnail image of the vessel.</li>
+							<li>The vessel's name.</li>
+							<li>The vessel's IMO number.</li>
+							<li>
+								The vessel's email address, which opens a new email message in
+								your default email client when clicked.
+							</li>
+							<li>
+								The vessel's status: <strong>At sea</strong> or
+								<strong>In port</strong>, based on the latest entry in the
+								<strong>Compass Error Log Book</strong>.
+							</li>
+							<li>
+								A button to download a complete copy of the Compass Error Log
+								Book in PDF format.
+							</li>
+							<div class="note">
+								The button will be inactive if the vessel's crew does not use
+								the Compass Error Log Book solution.
+							</div>
+							<li>
+								A button to download the most recently issued
+								<strong>Deviation Card</strong> issued via I-Deviator.
+							</li>
+							<div class="note">
+								The button will be inactive if the vessel's crew has not
+								completed any
+								<strong>Magnetic Compass Adjustment</strong> procedures via
+								I-Deviator solution. <br />
+								Deviation cards issued by other adjustment companies or shore
+								adjusters will not be displayed or available for download via
+								this feature.
+							</div>
+							<li>A button to expand the block into a detailed vessel card.</li>
+							<img
+								loading="lazy"
+								src="images/mb-expand-button.png"
+								alt="Expand vessel block button" />
+						</ul>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="mb-vessel-card">
+						<div class="title-line">
+							<h3><span>Vessel Card</span></h3>
+						</div>
+						<p>The vessel card consists of several information blocks.</p>
+						<img
+							loading="lazy"
+							src="images/mb-vessel-card.png"
+							alt="Vessel card" />
+
+						<div class="title-line">
+							<h3><span>General Information</span></h3>
+						</div>
+						<p>
+							At the top the following information and options are displayed:
+						</p>
+						<ul>
+							<li>Key information about the vessel.</li>
+							<li>
+								A function to add or remove the vessel from your favorites.
+							</li>
+							<li>A button to close the card and fold it back into a block.</li>
+						</ul>
+						<p>
+							The block also includes a larger image of the vessel, which the
+							vessel crew can upload or update through their I-Deviator profile.
+						</p>
+
+						<div class="title-line">
+							<h3><span>Compass Error Log Book Block</span></h3>
+						</div>
+						<img
+							loading="lazy"
+							src="images/mb-logbook-block.png"
+							alt="Compass Error Log Book block " />
+						<div class="note">
+							The information and features in the Compass Error Log Book block
+							are available only if the vessel crew uses the I-Deviator solution
+							for maintaining the Compass Observation Book.
+						</div>
+						<p>This block provides the following information:</p>
+						<ul>
+							<li>The date and time of the latest logbook entry.</li>
+							<li>
+								The vessel's status: <strong>At sea</strong> or
+								<strong>In port</strong>, based on the latest logbook entry.
+							</li>
+							<li>Total number of logbook entries for the past 30 days.</li>
+							<li>
+								Entry counts per crew member, including the percentage of
+								Overcast entries.
+								<div class="info">
+									High Overcast percentages may indicate negligence in
+									performing full readings and calculations when maintaining the
+									logbook.
+								</div>
+							</li>
+							<li>
+								Calculated deviation levels of the magnetic compass based on
+								logbook entries over the past 30 days, with color indicators for
+								excessive values.
+							</li>
+							<li>
+								Calculated gyrocompass error levels based on logbook entries
+								over the past 30 days, with color indicators for excessive
+								values.
+							</li>
+							<li>
+								A <strong>Download Logbook</strong> button to download a
+								complete copy of the Compass Error Log Book in PDF format.
+								<img
+									loading="lazy"
+									src="images/mb-download-logbook.png"
+									alt="" />
+								<div class="note">
+									The button will be inactive if the vessel crew does not use
+									the Compass Error Log Book solution.
+								</div>
+							</li>
+							<li>
+								A <strong>View Logbook</strong> button to access the Compass
+								Error Log Book directly for the selected vessel.
+								<img
+									loading="lazy"
+									src="images/mb-view-logbook.png"
+									alt="" />
+								<div class="info">
+									Refer to the
+									<a href="#logbook">Compass Error Log Book</a> section to learn
+									more about its structure and features.
+								</div>
+								<div class="note">
+									The button will be inactive if the vessel crew does not use
+									the Compass Error Log Book solution.
+								</div>
+							</li>
+						</ul>
+
+						<div class="title-line">
+							<h3><span>Magnetic Compass Adjustment Block</span></h3>
+						</div>
+						<img
+							loading="lazy"
+							src="images/mb-adjustment-block.png"
+							alt="Magnetic Compass Adjustment block " />
+						<p>This block provides the following information:</p>
+						<ul>
+							<li>
+								The date of the most recent completed Magnetic Compass
+								Adjustment procedure using I-Deviator.
+							</li>
+							<li>
+								The set validity period for the Deviation Card.
+								<div class="note">
+									By default, this parameter is set to 12 months. The vessel
+									crew can modify it in the vessel profile settings or in the
+									Data Management tab of the Compass Error Log Book section.
+								</div>
+							</li>
+							<li>
+								The calculated expiration date of the Deviation Card, including
+								the remaining validity period in months, with color indicators
+								for short remaining periods.
+								<div class="note">
+									The expiration date of the Deviation Card depends on the
+									validity period set by the vessel crew and may have a
+									calculation error of 1-3 days.
+								</div>
+							</li>
+							<li>
+								A <strong>Download Card</strong> button to download the most
+								recently issued Deviation Card for the selected vessel, created
+								using I-Deviator.
+								<img
+									loading="lazy"
+									src="images/mb-download-card.png"
+									alt="" />
+								<div class="note">
+									The button will be inactive if the vessel crew has not
+									completed any Magnetic Compass Adjustment procedures using
+									I-Deviator.
+								</div>
+							</li>
+							<li>
+								A <strong>View Procedure</strong> button to directly view the
+								most recent completed Magnetic Compass Adjustment procedure for
+								the selected vessel.
+								<img
+									loading="lazy"
+									src="images/mb-view-procedure.png"
+									alt="" />
+								<div class="info">
+									Refer to the
+									<a href="#adjustment">Magnetic Compass Adjustment</a> section
+									to learn more about its structure and features.
+								</div>
+								<div class="note">
+									The button will be inactive if the vessel crew has not
+									completed any Magnetic Compass Adjustment procedures using
+									I-Deviator.
+								</div>
+							</li>
+							<li>
+								Total number of completed Magnetic Compass Adjustment procedures
+								using I-Deviator for the selected vessel.
+							</li>
+							<li>
+								A <strong>View Adjustment History</strong> button to access the
+								history of all Magnetic Compass Adjustment procedures for the
+								selected vessel.
+								<img
+									loading="lazy"
+									src="images/mb-view-history.png"
+									alt="" />
+								<div class="info">
+									Refer to the
+									<a href="#adjustment">Magnetic Compass Adjustment</a> section
+									to learn more about its structure and features.
+								</div>
+								<div class="note">
+									Note: The Adjustment History screen displays all procedures,
+									including those with statuses such as incomplete, closed, and
+									completed.
+								</div>
+							</li>
+						</ul>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="mb-card-expiry-dates">
+						<div class="title-line">
+							<h3><span>Certificates Tab</span></h3>
+						</div>
+						<p>
+							The <strong>Certificates</strong> tab displays a list of the
+							company's fleet, sorted by the calculated expiration date of each
+							vessel's <strong>Deviation Card</strong>. Vessels with the nearest
+							expiration date appear higher in the list.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-expiry-dates.png"
+							alt="" />
+						<div class="info">
+							The table is unaffected by the favorite status of vessels or the
+							active state of the <strong>My Ships</strong> toggle on the Fleet
+							tab.
+						</div>
+						<div class="note">
+							The expiration date of the <strong>Deviation Card</strong> depends
+							on the validity period set by the vessel crew and may have a
+							calculation error of 1-3 days.
+						</div>
+
+						<p>
+							Use the <strong>Download list</strong> button to export the table
+							as an <strong>Excel</strong> file.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-expiry-download.png"
+							alt="" />
+
+						<p>
+							To quickly find a specific vessel by name or IMO number, use the
+							search panel displayed above the fleet list. Enter your query and
+							press <strong>Enter</strong> or click the
+							<strong>Search</strong> button.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-search.png"
+							alt="" />
+						<p>
+							To reset the search results, click the <strong>Cross</strong> icon
+							next to the search button.
+						</p>
+						<img
+							loading="lazy"
+							src="images/mb-search-cancel.png"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+					<div id="adjustment"></div>
+					<section
+						class="section"
+						id="general-info">
+						<div class="start">
+							<!-- <svg
+										width="18"
+										height="18"
+										viewBox="0 0 53 58"
+										fill="currentColor">
+										<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+									</svg> -->
+							<h2>Magnetic Compass 🧭 Adjustment</h2>
+						</div>
+						<div class="title-line">
+							<h3><span>General information</span></h3>
+						</div>
+						<p>
+							The magnetic compass adjustment procedure is conducted in three
+							stages:
+						</p>
+						<ol>
+							<li>
+								The information gathering stage: ship's position and
+								particulars, model of magnetic compass, details of compensating
+								tools, other relevant information.
+							</li>
+							<li>
+								The deviation identification stage. During this stage the ship
+								performs swinging according to corresponding instructions and
+								provides deviation data of the magnetic compass at present
+								condition.
+							</li>
+							<li>
+								The adjustment stage. At this stage vessel's staff is provided
+								with guidance for maneuvering and movement the correcting tools
+								for adjustment the compass. Upon successful completion of the
+								deviation adjustment procedure, an electronic document:
+								"Deviation Card" is issued, which can be downloaded to your
+								device and printed.
+							</li>
+						</ol>
+
+						<p class="info">
+							Adjustment procedure divided in to sub-stages with progress
+							indication above the chat window.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/stage-2-progress.png"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="get-started">
+						<div class="title-line">
+							<h3><span>Required data</span></h3>
+						</div>
+						<p>
+							At the initial stage of the procedure,
+							<span style="white-space: nowrap">I-Deviator</span> will collect
+							information about the vessel and the compass.
+						</p>
+						<p>You can prepare the required materials in advance:</p>
+
+						<ol>
+							<li>
+								Photos of the compass binnacle in its current condition, taken
+								from a distance of 2 to 3 meters, showing both the forward and
+								aft sections, as well as a photo of the compass bowl taken from
+								a distance of about 0.5 meters.
+								<img
+									loading="lazy"
+									src="images/compass-photo.jpg"
+									alt="" />
+							</li>
+							<li>
+								A copy of the most recent deviation table issued by a
+								shore-based adjuster.
+							</li>
+							<li>
+								Additionally, if available, the most recent compass maintenance
+								service report.
+							</li>
+							<li>
+								A copy of the last 3 pages of the compass error logbook (if
+								using a paper logbook) or a file with the last month's records
+								(if using an electronic logbook).
+							</li>
+							<li>
+								1-3 photos showing the current position of the compensating
+								magnets or correcting knobs.
+								<img
+									loading="lazy"
+									src="images/correction-tools.jpg"
+									alt="" />
+							</li>
+						</ol>
+
+						<p class="info">
+							If you are performing the procedure for the first time,
+							instructions on how to access the correcting tools will be
+							provided by
+							<span style="white-space: nowrap">I-Deviator</span> during the
+							procedure.
+						</p>
+
+						<p>
+							In addition to the materials, you may also gather the following
+							information in advance:
+						</p>
+
+						<ol>
+							<li>
+								The name of the manufacturer, the model, and the serial number
+								of the compass installed on the vessel.
+							</li>
+							<p class="info">
+								This information should be taken from the label on the compass
+								bowl. For example: Tokyo Keiki SH-165, 23321.<br />
+								You will be asked to provide these details separately during the
+								procedure.
+							</p>
+							<li>Are there any bubbles inside the compass bowl?</li>
+							<li>
+								Does the compass card move freely and smoothly without getting
+								stuck?
+							</li>
+							<li>If there are spare compensating magnets on board.</li>
+							<li>If there is a spare compass bowl on board.</li>
+						</ol>
+
+						<p class="note">
+							After completing the maneuvers and adjustments, you will need to
+							upload screenshots of the maneuver from the ECDIS and photos of
+							the new positions of the correcting tools.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="history">
+						<div class="title-line">
+							<h3><span>Magnetic Compass Adjustment section</span></h3>
+						</div>
+
+						<img
+							loading="lazy"
+							src="images/request-history.jpg"
+							alt="" />
+						<p>
+							This section will display all the previous adjustment procedures,
+							both completed and those in progress. Using this section, you can
+							always return to the process of chosen procedure or download the
+							'Deviation card' after its completion.
+						</p>
+						<img
+							loading="lazy"
+							src="images/request-history-view-download.png"
+							alt="" />
+						<p class="note">
+							You can always return to the 'Magnetic Compass Adjustment' section
+							by pressing the corresponding button in the sidebar.
+						</p>
+						<img
+							loading="lazy"
+							src="images/sidebar-adjustment.png"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="new-request">
+						<div class="title-line">
+							<h3><span>Start of procedure</span></h3>
+						</div>
+						<p>
+							To begin the compass adjustment procedure, click the 'Start new
+							adjustment procedure' button at the top of the Magnetic Compass
+							Adjustment section screen.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/start-new-adjustment.png"
+							alt="" />
+
+						<p>
+							An interactive chat window with
+							<span class="id">I-Deviator</span> will appear in the main area.
+							You will be prompted to enter information about the ship, its
+							position, the compass installed on the ship, the position of the
+							correctors, and other information in a chat format (question and
+							answer). Some messages will include forms for entering data,
+							interactive elements such as lists , switches and upload file
+							buttons.
+						</p>
+
+						<p class="note">
+							Enter the information carefully and double-check the entered data
+							before sending - you will not have the opportunity to edit the
+							response. If you made mistake, the request process must be started
+							from the beginning.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="chat">
+						<div class="title-line">
+							<h3><span>Chat window</span></h3>
+						</div>
+						<img
+							loading="lazy"
+							src="images/chat-window.png"
+							alt="" />
+						<p>The chat window is divided into several areas:</p>
+						<ol>
+							<li>
+								The upper area of the window contains information about the
+								current progress of the procedure.
+							</li>
+							<li>
+								The middle area of the window contains a history of messages in
+								chat format. You can always scroll to a specific message and
+								browse the information you entered, or responses from
+								<span class="id">I-Deviator</span> or an expert. Sometimes
+								responses will contain interactive elements or forms for data
+								entry. Fill in the data elements of such questions before
+								sending a response.
+							</li>
+							<li>
+								The action area at the bottom. Contains interactive action
+								elements, such as: <br /><br />
+								<ul class="none">
+									<li>
+										3.1. Confirmation buttons.<br />
+										<img
+											loading="lazy"
+											src="images/confirm-buttons.png"
+											alt="" />
+									</li>
+									<li>
+										3.2. Fields for entering text data.<br />
+										<img
+											loading="lazy"
+											src="images/text-field.png"
+											alt="" />
+									</li>
+									<li>
+										3.3. Selectors for date, direction.<br />
+										<img
+											loading="lazy"
+											src="images/selector.png"
+											alt="" />
+									</li>
+									<li>
+										3.4. A button to send a message.<br />
+										<img
+											loading="lazy"
+											src="images/send-button.png"
+											alt="" />
+									</li>
+									<li>
+										3.5. A button to call an expert.<br />
+										<img
+											loading="lazy"
+											src="images/invite-expert.png"
+											alt="" />
+									</li>
+									<li>
+										3.6. A button to attach files to a response during
+										interaction with an expert.<br />
+										<img
+											loading="lazy"
+											src="images/attach-file.png"
+											alt="" />
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="anomaly">
+						<div class="title-line">
+							<h3><span>Magnetic anomaly zone</span></h3>
+						</div>
+						<img
+							loading="lazy"
+							src="images/anomalous-area.png"
+							alt="" />
+						<p>
+							At the beginning of the deviation adjustment procedure,
+							<span class="id">I-Deviator</span> will ask confirmation that the
+							ship is not located in Magnetic Anomaly Zone (map will be
+							presented). It will not recommend conducting maneuvers there and
+							will be better to carry out swinging after the ship has left such
+							area. Meantime, you can commence the procedure by starting with
+							the information gathering stage.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="vessel">
+						<div class="title-line">
+							<h3><span>Vessel and compass information</span></h3>
+						</div>
+						<p>
+							The first stage of the procedure is dedicated to collecting
+							general information about the vessel, the compass installed on it,
+							and other information required to obtain the 'Deviation Card'.
+						</p>
+						<p class="note">
+							Carefully enter the data and fill out the forms. If data is
+							entered incorrectly, it may be necessary to start the procedure
+							again.
+						</p>
+						<ol>
+							<li>
+								When entering text data, use the field in the lower action area
+								to send the response by clicking the message
+								<strong>Send</strong> button or pressing the
+								<strong>Enter</strong> key.<br />
+								<img
+									loading="lazy"
+									src="images/send-button.png"
+									alt="" />
+							</li>
+							<li>
+								If there are interactive elements in the message or action area,
+								select the necessary options and then proceed to send the
+								message button. Where it is possible
+								<span class="id">I-Deviator</span> will highlight the element
+								with a red outline if incorrect or mandatory information is
+								missing.
+								<br />
+								<img
+									loading="lazy"
+									src="images/element-highlight.png"
+									alt="" />
+								<br />
+								In some cases, the send button will be inactive until you enter
+								the required information or select an option in the interactive
+								document, for example, when entering the position of the ship
+								and choosing a direction.
+								<br />
+								<img
+									loading="lazy"
+									src="images/inactive-send-button.png"
+									alt="" />
+
+								<p class="info">
+									The main part of the entered data is used in the formation of
+									the Deviation Card and will be displayed unchanged in it.
+									Therefore, enter values using the provided examples, without
+									adding extra information.
+								</p>
+							</li>
+							<li>
+								Upload file size is limited to 5MB. The previous deviation table
+								can be uploaded as an image or a digital document.
+							</li>
+							<li>
+								Select the compass manufacturer using the interactive list
+								element. If your compass manufacturer is not on the list, invite
+								an expert by clicking 'None of the options fits'.
+								<br />
+								<img
+									loading="lazy"
+									src="images/compass-select.png"
+									alt="" />
+							</li>
+							<li>
+								Download and print the compass instructions provided by
+								<span class="id">I-Deviator</span>, it will guide you thru
+								necessary corrective action. .
+								<br />
+								<img
+									loading="lazy"
+									src="images/download-compass-manual.png"
+									alt="" />
+							</li>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="correctors">
+						<div class="title-line">
+							<h3><span>Correctors</span></h3>
+						</div>
+						<p>
+							To obtain information about the current position of the
+							correctors, <span class="id">I-Deviator</span> will provide forms
+							with interactive elements corresponding to the compass installed
+							on the ship.<br />
+							Using the compass instructions, determine and indicate the
+							presence, location, or absence of correctors.
+						</p>
+						<p>
+							<strong>1. B and C compensation magnets.</strong><br />
+							The form is divided into three scales:<br />
+							- Fore-and-aft Port Side magnets;<br />
+							- Fore-and-aft Starboard Side magnets;<br />
+							- Athwartship magnets;<br /><br />
+							<img
+								loading="lazy"
+								src="images/b-correctors-form.png"
+								alt="" />
+
+							You can enter the required number of magnets, specify their
+							position on the scale and the direction the red pole of the magnet
+							is facing.<br />
+							Use the buttons to add and remove magnets on the scale.
+							<br />
+							<img
+								loading="lazy"
+								src="images/add-remove-magnet.png"
+								alt="" />
+						</p>
+
+						<p class="info">
+							You can submit an empty form if compensating magnets are absent.
+						</p>
+						<p class="note">
+							Carefully enter the values, as an input error will lead to
+							incorrect results for the entire procedure. If you encounter
+							difficulties at this stage, invite an expert by clicking the
+							corresponding button in the lower action area of the chat.
+						</p>
+						<br />
+						<p>
+							If a <strong>Tokyo Keiki Knob type (Tokimec)</strong> compass is
+							installed on the ship, in the form for B and C correctors,
+							indicate the value and color of the division scale.
+						</p>
+
+						<div>
+							<img
+								loading="lazy"
+								src="images/knob-type.png"
+								alt="" />
+						</div>
+
+						<p>
+							<strong>2. D correctors.</strong><br />
+							Depending on the type of compass installed on the ship, you will
+							be provided with a form to specify the location of correcting
+							spheres or boxes with plates. Using the compass instructions,
+							determine the values for these correctors and enter the data into
+							the provided form.<br />
+							<img
+								loading="lazy"
+								src="images/d-correctors-form.png"
+								alt="" /><br />
+							Use the corrector presence toggle to enable or disable it if the
+							sphere or plates in the box are absent.
+						</p>
+						<p>
+							<strong>3. Latitude correctors (Flinders bars).</strong><br />
+							Using the downloaded compass instructions, determine and input the
+							data into the provided form for this type of correctors.<br />
+							<img
+								loading="lazy"
+								src="images/flinders-bars-form.png"
+								alt="" /><br />
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="manoeuvres">
+						<div class="title-line">
+							<h3><span>Manoeuvres</span></h3>
+						</div>
+
+						<p class="info">
+							Before performing maneuvers, you will be provided with
+							instructions.
+						</p>
+
+						<p class="note">
+							All maneuvers should be carried out in full awareness of traffic
+							safety and in favorable weather conditions which should permit to
+							take compass readings with accuracy 0.2 – 0.3 degrees.
+							<br /><br />
+							To ensure accurate magnetic compass adjustment, please keep all
+							walkie-talkies, metal tools, and other metallic or electronic
+							devices (Mobile phone, Tablet PC, etc) away from the compass
+							during the adjustment procedure. The presence of these items can
+							create magnetic interference, leading to incorrect readings and
+							inaccurate adjustments.
+							<br /><br />
+							If ORCA camera, STARLINK antenna or other electrical equipment is
+							to be installed on compass deck, it shall be installed in
+							accordance with
+							<strong
+								>IMO Resolution A.382(X) Magnetic compass carriage and
+								performance standards - 8.4 </strong
+							><br />
+							<i
+								>The distance of the magnetic compass from electrical or
+								magnetic equipment should be at least equal to the safe distance
+								specified for the equipment and be to the satisfaction of the
+								Administration.</i
+							>
+						</p>
+
+						<p>
+							After confirming the possibility to start maneuvers,
+							<span class="id">I-Deviator</span> will send a form for each
+							course separately.
+						</p>
+
+						<p class="note">
+							Enter values carefully, as an error at this stage may lead to
+							incorrect results for the entire procedure.
+						</p>
+
+						<p>
+							<strong
+								>1. Maneuvers based on the suggested Magnetic headings.</strong
+							><br />
+							These maneuvers are performed first, and the deviation for each of
+							the proposed courses will be calculated based on their results.<br /><br />
+
+							Set the vessel on the proposed Magnetic heading and after 2-3
+							minutes input the corresponding True heading in the appropriate
+							box. Also, enter the variation in the respective field. The
+							variation for each course can be entered separately.
+						</p>
+
+						<p class="info">
+							In case deviation values on each of 4 cardinal and 4
+							inter-cardinal heading turned out to be less than +/-3.0 degrees,
+							new Deviation Card will be issued without additional adjustment.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/maneuvers-1.png"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="instructions">
+						<div class="title-line">
+							<h3><span>Instructions</span></h3>
+						</div>
+						<p>
+							If deviations above the norm are detected as a result of the
+							maneuvers, <span class="id">I-Deviator</span> will provide
+							instructions for moving the correctors and details for carrying
+							out additional maneuvers.
+						</p>
+
+						<p class="note">
+							If you encounter difficulties at this stage, you can invite an
+							expert.
+						</p>
+						<img
+							loading="lazy"
+							src="images/invite-expert.png"
+							alt="" />
+						<p class="note">
+							In some cases, <span class="id">I-Deviator</span> will
+							automatically invite an expert.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="deviation-card">
+						<div class="title-line">
+							<h3><span>Deviation card</span></h3>
+						</div>
+						<p>
+							Upon completion of the procedure,
+							<span class="id">I-Deviator</span> will offer to download and/or
+							send the "Deviation card" digital document to the email specified
+							in your profile.
+						</p>
+						<img
+							loading="lazy"
+							src="images/download-deviation-card.png"
+							alt="" />
+
+						<p class="info">
+							If you face any difficulties in receiving the document or find an
+							error in it, please contact support via email
+							<a href="mailto:support@i-deviator.cz">support@i-deviator.cz</a>.
+						</p>
+
+						<p class="note">
+							The Deviation card can be downloaded at any time from the "Request
+							history" screen, using the corresponding download button.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="expert">
+						<div class="title-line">
+							<h3><span>Chat with an expert</span></h3>
+						</div>
+						<p>
+							During the deviation adjustment procedure, you can invite an
+							expert. To initiate the procedure there is a corresponding button
+							in the lower area of the chat window.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/invite-expert.png"
+							alt="" />
+
+						<p class="info">
+							Please note that the button to invite an expert will be available
+							from the second stage of the procedure, after the general
+							information gathering stage has been completed.
+						</p>
+
+						<img
+							loading="lazy"
+							src="images/stage-2-progress.png"
+							alt="" />
+
+						<p>
+							You can send messages to the expert and attach files to your
+							messages. If your message is successfully sent, it will appear in
+							the chat. If there are problems with the internet connection
+							during the message sending, you will need to resend it.
+						</p>
+						<img
+							loading="lazy"
+							src="images/attach-file.png"
+							alt="" />
+						<p class="note">
+							Please be informed that reviewing the submitted information will
+							take some time (about three hours) before connecting to an expert
+							and providing a response. Feel free to leave
+							<span class="id">I-Deviator</span> page and come back later for
+							the expert's reply.
+						</p>
+						<p class="info">
+							You can always return to the current procedure using the "Request
+							History" screen.
+						</p>
+						<img
+							loading="lazy"
+							src="images/request-history.jpg"
+							alt="" />
+						<img
+							loading="lazy"
+							src="images/request-history-view-download.png"
+							alt="" />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="adjustment-FAQ">
+						<div class="title-line">
+							<h3><span>Frequently Asked Questions</span></h3>
+						</div>
+						<div class="faq-list">
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. How long standard Deviation card is valid?
+								</h5>
+								<p class="faq-item__answer">
+									A. Standard deviation card, including issued after adjustment,
+									is valid within 2 years period. Although, some Flag
+									Administrations or Shipowners may reduce such period to one
+									year.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. What is maximum admissible value of residual deviation for
+									vessel’s standard magnetic compass?
+								</h5>
+								<p class="faq-item__answer">
+									A. Maximum admissible value of deviation is +/- 3.0 degrees
+									for vessels greater than 500 g.r.t.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. What coefficient B reflects?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient B reflects the value of deviation level on E
+									and W directions: bigger coefficient – bigger value of
+									deviation.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. What coefficient C reflects?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient C reflects the value of deviation level on N
+									and S directions: bigger coefficient – bigger value of
+									deviation.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. What coefficient D reflects?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient D reflects the value of deviation level on
+									inter-cardinal directions: bigger coefficient – bigger value
+									of deviation.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. How is coefficient B calibrating?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient B is calibrating by approaching or distancing
+									fore-and-aft magnets to or from compass bowl.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. How is coefficient C calibrating?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient C is calibrating by approaching or distancing
+									athwart-ship magnets to or from compass bowl.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. How is coefficient D calibrating?
+								</h5>
+								<p class="faq-item__answer">
+									A. Coefficient D is calibrating by approaching or distancing
+									side spheres or boxes with soft iron plates to or from compass
+									bowl.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. Spare magnetic compass. When and how spare magnetic compass
+									should be adjusted?
+								</h5>
+								<p class="faq-item__answer">
+									A. Spare magnetic compass must be adjusted only after
+									installation in binnacle on permanent basis by standard
+									adjustment procedure.
+								</p>
+							</div>
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. Why each measured deviation value may show "+" or "-" sign?
+								</h5>
+								<div class="faq-item__answer">
+									A. Among various reasons main are:<br />
+									<ul>
+										<li>
+											insufficient accuracy during take compass readings or keep
+											walkie-talkie, mobile phone near the compass bowl
+										</li>
+										<li>
+											electrical or magnetic equipment close to the compass is
+											recently added, removed or altered
+										</li>
+										<li>vessel was recently involved in accident</li>
+										<li>
+											on-board cargo has significant magnetic properties and
+											located mostly on vessel’s port or starboard side.
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. How many maneuvers are required for obtaining a compass
+									deviation card?
+								</h5>
+								<p class="faq-item__answer">
+									<strong>One maneuver:</strong>
+									during checking of compass deviation values on headings 000°,
+									045°, 090°, 135°, 180°, 225°, 270°, and 315°,
+									<br />
+									if the residual deviation on all these headings does not
+									exceed the following limits:
+									<br />• 4° for vessels below 500 gross tonnage; <br />• 3° for
+									vessels of 500 gross tonnage or more according to
+									<strong>ISO 25862:2019(E)</strong>.<br /><br /><strong
+										>The second maneuver</strong
+									>
+									may be required depending on which headings residual deviation
+									exceeds the above limits, combined with the repositioning of
+									magnets.
+								</p>
+							</div>
+
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. What factors determine the date specified in the
+									certificate as the date of issuance?
+								</h5>
+								<p class="faq-item__answer">
+									A. The date of issue of the certificate is the date on which
+									the first or, if applicable, the second adjustment maneuver
+									was carried out.
+								</p>
+							</div>
+
+							<div class="faq-item">
+								<h5 class="faq-item__question">
+									Q. Why does the deviation obtained during the maneuvers differ
+									from the one shown on the deviation card?
+								</h5>
+								<p class="faq-item__answer">
+									The deviation shown on the deviation card is calculated based
+									on the coefficients listed on the card, as well as the
+									formulas of Archibald Smith and Siméon Denis Poisson.
+								</p>
+							</div>
+						</div>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section
+						class="section"
+						id="logbook">
+						<div class="content-mainTitle-wrapper">
+							<!-- <svg
+										width="18"
+										height="18"
+										viewBox="0 0 53 58"
+										fill="currentColor">
+										<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+									</svg> -->
+							<h2>Compass Error Log Book 📘 ✍</h2>
+						</div>
+						<p>
+							The Compass Error Log Book is a modern web-based solution designed
+							for maintaining on-board logbooks specifically for compass
+							observations. It enables the ship's crew to enter the required
+							observation data and receive relevant parameters and analytics,
+							allowing for a more efficient allocation of human resources to
+							other tasks.
+						</p>
+						<p class="video-wrapper">
+							<video
+								class="responsive-video"
+								poster="video/logbook-poster.jpg"
+								src="video/logbook.mp4"
+								controls
+								preload="metadata"></video>
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-screen">
+						<div class="title-line">
+							<h3><span>Compass Error Log Book section</span></h3>
+						</div>
+						<img
+							loading="lazy"
+							src="images/lb-logbook-screen.png"
+							alt="" />
+						<p>The Compass Error Log Book section contains these items:</p>
+						<ol>
+							<li>
+								Tabs to switch between different functional parts of the Compass
+								Error Log Book:
+								<ul>
+									<li>
+										Compass Error Log Book - tab with the electronic log book
+										and its controls.
+									</li>
+									<li>
+										Data Management - tab with information about compass
+										maintenance and auxiliary options.
+									</li>
+									<img
+										loading="lazy"
+										src="images/lb-tabs.png"
+										alt="" />
+								</ul>
+								<p>Switching tabs is clickable.</p>
+							</li>
+							<li>
+								Data search form in the logbook
+								<img
+									loading="lazy"
+									src="images/lb-search.png"
+									alt="" />
+							</li>
+							<li>
+								Button that calls a drop-down box with settings for exporting
+								log records to an Excel file.
+								<img
+									loading="lazy"
+									src="images/lb-Excel.png"
+									alt="" />
+							</li>
+							<li>
+								Button to call the drop-down box with settings for displaying
+								the logbook records filtered by date or date range.
+								<img
+									loading="lazy"
+									src="images/lb-filter.png"
+									alt="" />
+							</li>
+							<li>
+								Information block indicating the total number of records in the
+								logbook and the range of dates for which they were logged.
+								<img
+									loading="lazy"
+									src="images/lb-range.png"
+									alt="" />
+							</li>
+							<li>
+								Compass Error Log Book table with field headings and records.
+								There are 12 entries per page, sorted by newest at the top.
+								<img
+									loading="lazy"
+									src="images/lb-logbook.png"
+									alt="" /><br />
+								In addition to the fields from a classic paper logbook, the
+								table contains a <strong>Status</strong> column, which indicates
+								the status of each particular logbook entry.<br /><br />
+								<strong>A table of record states:</strong><br /><br />
+
+								<div class="table-wrapper">
+									<table border="1">
+										<tr>
+											<th>Status icon</th>
+											<th>When hovering</th>
+											<th>Description of value</th>
+											<th>Tooltip</th>
+										</tr>
+										<tr>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-saved.jpg"
+													alt="" />
+											</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-edit.jpg"
+													alt="" />
+											</td>
+											<td>The record is saved with the ability to edit</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-hint-edit.jpg"
+													alt="" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-edited.jpg"
+													alt="" />
+											</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-edit.jpg"
+													alt="" />
+											</td>
+											<td>
+												The record is saved with the ability to edit and has
+												been edited previously
+											</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-hint-edited.jpg"
+													alt="" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-block.jpg"
+													alt="" />
+											</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-cant-edit.jpg"
+													alt="" />
+											</td>
+											<td>
+												The record has been saved without the ability to edit it
+											</td>
+											<td>
+												<img
+													loading="lazy"
+													src="images/lb-status-hint-cant-edit.jpg"
+													alt="" />
+											</td>
+										</tr>
+									</table>
+								</div>
+
+								<div class="note">
+									Please note:
+									<ul>
+										<li>
+											The saved record will be located in the logbook according
+											to the date and time specified in the Date/UTC fields.
+										</li>
+										<li>
+											The record can be edited within 7 days from the date of
+											its creation, after this period, the record will be
+											blocked for editing. <br />
+											The original record and all its revisions will be stored
+											in the platform database, but will not be explicitly
+											displayed in the log. The edited record will have a status
+											indicating the change of the record and indicating the
+											number of edits.<img
+												loading="lazy"
+												src="images/lb-status-hint.png"
+												alt="" />
+										</li>
+									</ul>
+								</div>
+								<p>
+									Also, unlike the paper logbook, the Compass Error Log Book
+									contains a Correlation Value field column, which displays the
+									value of the difference between the deviation calculated for
+									the magnetic heading specified in the record and the deviation
+									from the actual deviation card.
+								</p>
+								<p class="note">
+									Please note:<br />
+									To calculate the Correlation Value, an up-to-date deviation
+									card record must be available in the Deviation Card Log on the
+									Data Management tab.
+								</p>
+							</li>
+							<li>
+								Button for opening and closing the information block, with brief
+								supporting information on the electronic logbook.
+								<img
+									loading="lazy"
+									src="images/lb-info.png"
+									alt="" />
+								<strong>Information block</strong>
+								<img
+									loading="lazy"
+									src="images/lb-info-block.jpg"
+									alt="" />
+							</li>
+							<li>
+								Elements for navigating through the logbook pages
+								<ul>
+									<li>to the newest log records</li>
+									<li>to the page to newer records</li>
+									<li>to page to older records</li>
+									<li>to the very first log entries</li>
+								</ul>
+								<img
+									loading="lazy"
+									src="images/lb-pagination.png"
+									alt="" />
+							</li>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-highlight">
+						<div class="title-line">
+							<h3><span>Highlighting of increased values</span></h3>
+						</div>
+						<p>
+							The cells of Gyro Error, Deviation and Correlation Value columns
+							are highlighted with red background colour with different
+							gradations in case of overestimated values in them.
+							<img
+								loading="lazy"
+								src="images/lb-higtlight.png"
+								alt="" />
+						</p>
+						<h4>Highlight the Gyro Error cell</h4>
+						<p class="info">
+							In accordance with
+							<strong
+								>IMO Resolution A.424(XI) – Performance Standards for
+								Gyro-Compasses</strong
+							>
+							(adopted in 1979), the required accuracy of a gyrocompass is
+							defined as follows: <br />
+							- under static conditions, the settle point error should not
+							exceed ±0.75° × secant latitude, which corresponds to
+							approximately ±0.75° to ±1.5° for latitudes between 0° and 60°.
+							<br />
+							- under dynamic conditions, the residual steady-state error must
+							not exceed ±0.25° × secant latitude, or approximately ±0.25° to
+							±0.5° within the same latitude range. <br />
+							However, gyrocompass manufacturers typically declare accuracy,
+							usually between ±0.25° and ±0.5°, under normal operational
+							conditions. <br />
+						</p>
+						<p>
+							Taking both the regulatory requirements and current technological
+							capabilities into account, Compass Error Log Book is programmed to
+							monitor gyro error and notifies the crew when deviation may
+							indicate misalignment or drift. If the gyro error exceeds 0.5°,
+							the system cell will have a reddish background and indicates an
+							elevated value. When the error falls between 0.5° and 1.0°,
+							calibration is recommended - either by the crew, if the
+							gyrocompass interface allows, or by a service provider. If the
+							gyro error exceeds 1.0°, a formal calibration is required, as the
+							deviation surpasses both the expected technological accuracy and
+							the performance thresholds set by the IMO standard.
+						</p>
+						<p></p>
+						<h4>Determining the Gyro Error</h4>
+						<p class="info">
+							<strong
+								>Bridge Procedures Guide, Sixth Edition, 5.3.2 Gyro
+								compass</strong
+							><br />
+							<i
+								>The gyro usually supports several repeaters including a
+								required repeater at the emergency steering position. Gyro
+								repeaters on the bridge should be checked against the main gyro
+								at least once per watch and after significant manoeuvring. Other
+								repeaters should be checked frequently. Any anomalies should be
+								corrected and the gyro repeaters resynchronised.</i
+							>
+							<br />
+							<br />
+							<strong
+								>IMO Resolution A.424(XI) Performance standards for gyro
+								compasses, 5.2.4</strong
+							><br />
+							<i
+								>The maximum divergence in reading between the master compass
+								and repeaters under all operational conditions should not exceed
+								+/- 0.5°
+							</i>
+						</p>
+						It is recommended to check the synchronisation of the gyro repeaters
+						with the master compass before determining the gyro error. And if
+						the difference in readings will be more than 0,5 degrees, it is
+						necessary to synchronise the repeater(s) according to the
+						manufacturer's manual.<br />
+						If the gyro error is significant (in line with IMO Resolution
+						A.424(XI), Flag or Company requirements) and compass calibration is
+						necessary, it must be performed in strict compliance with the
+						manufacturer's manual. Calibration can be performed by the crew by
+						making changes in the settings, using the gyro compass interface (if
+						this is provided and allowed by the manufacturer) or by calling a
+						service engineer on board.
+
+						<h4>Highlight the Deviation and the Correlation Value cells</h4>
+						<p class="info">
+							According to ISO 25862:2019(E) A properly adjusted compass shall
+							have a residual deviation within 3° in vessels of 500 or more
+							gross tonnage and, 4° in vessels below 500 gross tonnage.
+							Accuracies shall be within 2° for safe navigation.<br />
+						</p>
+						<p>
+							In line with these requirements, Compass Error Log Book logbook is
+							configured to indicate the crew if the Correlation value exceeds
+							2°, ensuring timely awareness and corrective action to maintain
+							safe navigation.<br />
+							The magnetic compass deviation values are highlighted starting
+							from 3° and have wider gradation steps. A constantly overestimated
+							deviation of more than 5° for several directions indicates that
+							the magnetic compass requires adjustment.
+						</p>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-data-management">
+						<div class="title-line">
+							<h3><span>Data Management Tab</span></h3>
+						</div>
+						<p>
+							If this is the first time the Compass Error Log Book has been
+							launched, it is recommended that you visit the Data Management tab
+							first.
+						</p>
+						<p>
+							Here you can specify some useful parameters that will improve the
+							user experience of the electronic logbook.
+						</p>
+						<p>Let's take a closer look at them:</p>
+
+						<div class="title-line">
+							<h3><span>Deviation Card Log Block</span></h3>
+						</div>
+						<p>
+							Deviation Card Log is used to record the received deviation cards
+							of the vessel, as well as to calculate the Correlation Value field
+							- the difference between the log and table deviation values for a
+							certain course, calculated when adding an entry to the Compass
+							Error Log Book. In addition, the data from the Deviation Card Log
+							will help to notify in due time about deviation card expiry.
+						</p>
+						<p>
+							The Deviation Card Log can be filled in automatically or manually.
+							If the magnetic compass adjustment procedure was performed with
+							the I-Deviator, a deviation card record can be added automatically
+							after the procedure is completed. This entry cannot be edited, but
+							can be viewed by clicking on the edit icon in the entry bar.
+						</p>
+						<img
+							loading="lazy"
+							src="images/lb_data_edit_record.png"
+							alt="" />
+						<p>
+							If, when completing the magnetic compass adjustment procedure with
+							the I-Deviator, a new deviation entry was not added automatically
+							or the deviation card was issued by another company by the
+							adjuster - a manual entry must be added to the log.
+						</p>
+
+						<div class="title-line">
+							<h3>
+								<span>Manually adding an record to the Deviation Card Log</span>
+							</h3>
+						</div>
+
+						<ol>
+							<li>
+								Click the <strong>Add</strong> button
+								<img
+									loading="lazy"
+									src="images/lb-data-add-record.png"
+									alt="" />
+							</li>
+							<li>
+								Carefully fill in the fields of the form:
+								<ul>
+									<li>
+										<strong>Issue Date</strong> - the date specified in the
+										deviation card. Mandatory field.
+									</li>
+									<li>
+										<strong
+											>Magnetic Compass: Manufacturer, Model, Serial
+											number</strong
+										>
+										- information about the compass installed on board. compass
+										installed on board the vessel. Can be used when uploading
+										Compass Error Log Book to Excel, when making annual report
+										on deviation changes and in other places of the platform.
+										Required fields.
+									</li>
+									<li>
+										<strong>Adjustment Company</strong> - the name of the
+										compass adjuster company that issued the document. Optional
+										field.
+										<img
+											loading="lazy"
+											src="images/lb-data-add-form-info.png"
+											alt="" />
+									</li>
+									<li>
+										<strong>Ship's Head Deviation fields</strong> - deviation
+										values for different courses from the deviation table of the
+										document in 15 degree increments.
+										<p>
+											Values for courses 0,45,90,135,180,225,270,315 degrees are
+											mandatory.
+										</p>
+										<img
+											loading="lazy"
+											src="images/lb-data-add-form-table.png"
+											alt="" />
+									</li>
+								</ul>
+								<p class="note">
+									Please note: Enter western deviation values with a negative
+									sign (minus).
+									<br />
+									It is recommended to fill in the data of intermediate rates,
+									which increases the accuracy of Correlation Value calculation.
+									If the deviation table does not contain data for one or more
+									mandatory courses, the values for them need to be calculated
+									by linear interpolation from adjacent courses.
+									<br />
+									Example: to calculate by linear interpolation the deviation
+									value for a 45 degree course with available deviation values
+									for 40 and 60 degrees, the formula is used:
+									<img
+										loading="lazy"
+										src="images/lb-data-add-form-calc.png"
+										alt="" />
+								</p>
+							</li>
+							<li>
+								Save the recording by clicking the <strong>Save</strong> button.
+								<img
+									loading="lazy"
+									src="images/lb-data-add-form-save.png"
+									alt="" />
+							</li>
+							<li>A record has been successfully added to the Log.</li>
+							<div class="note">
+								Please note:
+								<ul>
+									<li>
+										A manually added record can be edited within 7 days from the
+										date the record was added.
+									</li>
+									<li>
+										It is not possible to add multiple records with the same
+										Issue Date. Use edit if an error was made when adding the
+										record. If the record is already locked for editing, create
+										a new record by specifying the Issue Date the next day from
+										the day specified in the document.
+									</li>
+									<li>
+										Do not forget to add data from new deviation cards as you
+										received them.
+									</li>
+								</ul>
+							</div>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-adding">
+						<div class="title-line">
+							<h3><span>Adding a record to the logbook</span></h3>
+						</div>
+
+						<p>To add a new entry to the Compass Error Logbook:</p>
+
+						<ol>
+							<li>Log in to the I-Deviator using your credentials.</li>
+							<li>
+								Use the <strong>Compass Error Logbook</strong> button on the
+								left sidebar to navigate to the electronic logbook section.
+								<img
+									loading="lazy"
+									src="images/sidebar-logbook.png"
+									alt="" />
+							</li>
+							<li>
+								Click the <strong>Add record</strong> button below the log
+								table.
+								<img
+									loading="lazy"
+									src="images/lb-add-record.png"
+									alt="" />
+							</li>
+							<li>
+								A form for adding an entry will appear.
+								<img
+									loading="lazy"
+									src="images/lb-add-record-form.png"
+									alt="" />
+							</li>
+							<li>
+								Choose one of the available entry modes: <br /><br />
+								<ul>
+									<li>
+										<strong>Defaul</strong>t – Used when weather conditions
+										allow taking bearings.
+									</li>
+									<li>
+										<strong>Overcast</strong> - Used when weather conditions do
+										not allow taking bearings.
+									</li>
+									<li>
+										<strong>Another Reason</strong> - Used when conditions other
+										than weather prevent taking bearings.
+									</li>
+									<li>
+										<strong>Vessel in port</strong> – Used to indicate that the
+										vessel is in port.
+									</li>
+								</ul>
+
+								<p class="note">
+									Please note: <br />
+									Each entry mode has a Comment field where you can add a note
+									about the current entry. For example, for a Vessel in port
+									entry, you can specify the date range the vessel will be in
+									port.
+								</p>
+							</li>
+
+							<li>
+								Fill in the form fields. <br /><br />
+
+								All fields except the <strong>Comment</strong> and
+								<strong>Correlation Value</strong> fields are mandatory. For
+								direction fields, select the appropriate value by clicking the
+								radio button.
+
+								<img
+									loading="lazy"
+									src="images/lb-fields.png"
+									alt="" />
+
+								Use the back <strong>←</strong> and forward
+								<strong>→</strong> keys on your keyboard to move between
+								delimiters within a field. Enter degrees, time values using
+								leading zeros, e.g., 001 instead of 1.
+								<img
+									loading="lazy"
+									src="images/lb-input-field.png"
+									alt="" />
+
+								Unfilled or incorrectly filled fields will be highlighted in
+								red.
+								<img
+									loading="lazy"
+									src="images/lb-fileld-error.png"
+									alt="" />
+
+								To calculate the Correlation Value, data from the current
+								deviation card must already be added to the Deviation Card Log
+								on the Compass Maintenance tab.
+							</li>
+
+							<li>
+								Select your role from the Observer list. <br /><br />
+								Each role in the logbook should have a signature attached, which
+								can be uploaded as an image file or signed on an electronic
+								canvas. This is done once, and the logbook will use the
+								signature when the associated role is selected.
+								<div class="note">
+									Please note:
+									<ul>
+										<li>
+											When the crew changes, a new signature must be assigned to
+											roles. This does not affect existing entries in the
+											logbook.
+										</li>
+										<li>A signature cannot be deleted, only replaced.</li>
+										<li>
+											It is recommended to use the electronic canvas to create a
+											signature.
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								If necessary, add a comment to the entry. <br />
+								<img
+									loading="lazy"
+									src="images/lb-comment.png"
+									alt="" />
+								<div class="note">
+									Please note:
+									<ul>
+										<li>The comment length is limited to 50 symbols.</li>
+										<li>
+											For Overcast and Vessel in port modes, the Comment field
+											includes an entry mode icon and placeholder text that can
+											be changed.
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								Save the entry by clicking the <strong>Save button</strong>
+							</li>
+
+							<img
+								loading="lazy"
+								src="images/lb-save.png"
+								alt="" />
+
+							<p>
+								After successfully adding the entry, you will be automatically
+								returned to the log screen. If there are unfilled or incorrectly
+								filled fields in the form, you will receive an error message,
+								and the fields requiring attention will be highlighted in red
+								for correction.
+							</p>
+
+							<img
+								loading="lazy"
+								src="images/lb-form-error.png"
+								alt="" />
+
+							<div class="note">
+								Please note:
+								<ul>
+									<li>
+										The saved entry will be placed in the log according to the
+										date and time specified in the Date/UTC fields.
+									</li>
+									<li>
+										The entry can be edited within 7 days of its creation, after
+										which it will be locked for editing.
+									</li>
+									<li>
+										The original entry and all its revisions will be saved in
+										the platform's database but will not be explicitly displayed
+										in the log. The edited entry will have a status indicating
+										the change and the number of edits.
+									</li>
+
+									<img
+										loading="lazy"
+										src="images/lb-status-hint.png"
+										alt="" />
+
+									<li>
+										An entry can be backdated (up to 30 days from the current
+										date). This option helps to fill in the log after a
+										prolonged absence of an internet connection. The actual
+										creation date of the entry will be saved separately to
+										prevent constant untimely log keeping
+									</li>
+
+									<li>
+										An entry can be backdated (up to 30 days from the current
+										date). This option helps to fill in the log after a
+										prolonged absence of an internet connection. The actual
+										creation date of the entry will be saved separately to
+										prevent constant untimely log keeping
+									</li>
+								</ul>
+							</div>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-editing">
+						<div class="title-line">
+							<h3><span>Editing logbook record</span></h3>
+						</div>
+						<p>To edit an existing log record, you need to:</p>
+						<ol>
+							<li>
+								Move the cursor over the record <strong>Status</strong> cell
+								<img
+									loading="lazy"
+									src="images/lb-edit-status.png"
+									alt="" />
+							</li>
+							<li>
+								If the record is not locked for editing, the status icon will
+								change to a pencil.
+								<img
+									loading="lazy"
+									src="images/lb-edit-pencil.png"
+									alt="" />
+							</li>
+							<li>
+								Click on the pencil icon to go to the record editing form.
+								<img
+									loading="lazy"
+									src="images/lb-edit-record-form.png"
+									alt="" />
+							</li>
+							<li>
+								Make the required changes according to the rules of adding an
+								record to the log and save the record by pressing the Save
+								button.
+								<img
+									loading="lazy"
+									src="images/lb-data-add-form-save.png"
+									alt="" />
+							</li>
+						</ol>
+						<div class="note">
+							Please note:
+							<ul>
+								<li>
+									The saved record will be located in the logbook according to
+									the specified date and time in the Date/UTC fields.
+								</li>
+								<li>
+									The record can be edited within 7 days from the date of its
+									creation, after expiry of this period, the record will be
+									blocked for editing.
+								</li>
+								<li>
+									The original record and all its revisions will be stored in
+									the platform database, but will not be explicitly displayed in
+									the logbook. The edited record will have a status indicating
+									the change of the record and indicating the number of edits.
+								</li>
+							</ul>
+							<img
+								loading="lazy"
+								src="images/lb-cant-edit.png"
+								alt="" />
+						</div>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-searching">
+						<div class="title-line">
+							<h3><span>Searching and filtering data</span></h3>
+						</div>
+						<p>
+							To search through the logbook, use the search form above the
+							logbook table:
+							<img
+								loading="lazy"
+								src="images/lb-search.png"
+								alt="" />
+						</p>
+						<ol>
+							<li>
+								To search, type the query in the form and press Enter or click
+								the search icon.
+							</li>
+							<li>
+								To reset the search, delete the entered query text and press
+								Enter or the search icon.
+							</li>
+						</ol>
+						<p class="note">
+							Please note:<br />
+							The search is performed on data from all logbook fields except
+							date.
+						</p>
+
+						<p>
+							To filter records by date or date range, use the function to
+							select the displayed records by selected range:
+						</p>
+						<ol>
+							<li>
+								Click the button
+								<strong>Select range of records by date</strong> to bring up a
+								drop-down box with options for displaying logbook records
+								filtered by date or date range.
+								<img
+									loading="lazy"
+									src="images/lb-filter.png"
+									alt="" />
+							</li>
+							<li>
+								In the drop-down box, specify the date range, records for which
+								you want to display. The first click on the date marks the start
+								date, the second click on the end date. The selected range is
+								highlighted.
+								<img
+									loading="lazy"
+									src="images/lb-filter-box.png"
+									alt="" /><br />
+								To select a specific date, double-click on it.<br />
+								The selected range is displayed below as text and can be reset
+								with the <strong>Reset</strong> button.
+							</li>
+							<li>
+								After specifying the range, click the
+								<strong>Show records</strong> button. The drop-down box will
+								close and the logbook table will display records included in the
+								selected range.
+								<img
+									loading="lazy"
+									src="images/lb-show-records.png"
+									alt="" /><br />
+							</li>
+						</ol>
+						<p>To disable filtering of records by date range:</p>
+						<ol>
+							<li>
+								Call the drop-down box again by clicking on the button
+								<strong>Select range of records by date</strong>
+								<img
+									loading="lazy"
+									src="images/lb-filter.png"
+									alt="" />
+							</li>
+							<li>
+								Set the <strong>Show logbook for all time</strong> switch to
+								active. This will hide the range selection calendars.
+								<img
+									loading="lazy"
+									src="images/lb-filter-box-all.png"
+									alt="" />
+							</li>
+							<li>
+								Click the <strong>Show records</strong> button. The drop-down
+								box will disappear and the filtering of logbook records will be
+								disabled.
+								<img
+									loading="lazy"
+									src="images/lb-show-records.png"
+									alt="" /><br />
+							</li>
+						</ol>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="logbook-exporting">
+						<div class="title-line">
+							<h3>
+								<span>Exporting data from the logbook to a PDF file</span>
+							</h3>
+						</div>
+						<p>
+							Logbook data can be exported to a PDF file prepared for printing
+							or sending as an electronic file-document.
+						</p>
+						<p>In order to export the logbook data to a PDF file:</p>
+						<ol>
+							<li>
+								Click the button <strong>Download data</strong> to call the
+								drop-down box with options for downloading the logbook records
+								to a PDF file.
+								<img
+									loading="lazy"
+									src="images/lb-data.png"
+									alt="" />
+							</li>
+							<li>
+								In the drop-down box specify the date range, records for which
+								you want to export to the file. The first click on the date
+								marks the start date, the second click on the end date. The
+								selected range is highlighted.
+								<img
+									loading="lazy"
+									src="images/lb-data-box.png"
+									alt="" />
+								<br />
+								If you want to export all logbook records, set the
+								<strong>Download logbook for all time</strong> switch to active.
+								This will hide the range selection calendars.
+								<br />
+								<img
+									loading="lazy"
+									src="images/lb-excel-box-all.png"
+									alt="" />
+							</li>
+							<li>
+								Click the <strong>Download</strong> button. The prepared file
+								will be downloaded according to the web browser settings.
+								<img
+									loading="lazy"
+									src="images/lb-excel-example.png"
+									alt="" />
+							</li>
+						</ol>
+						<div class="note">
+							Please note: <br />
+							<ul>
+								<li>
+									The file does not display the Status and Correlation Value
+									columns, nor does it highlight cells with excessive values.
+								</li>
+								<li>
+									The file is as close as possible to the look of the classic
+									paper Compass Error Log Book.
+								</li>
+							</ul>
+						</div>
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+					<section id="tips">
+						<div class="content-mainTitle-wrapper">
+							<!-- <svg
+								width="18"
+								height="18"
+								viewBox="0 0 53 58"
+								fill="currentColor">
+								<use href="/images/sprite/sprite.svg#arrowSprite"></use>
+							</svg> -->
+							<h2>Tips and tricks ✨</h2>
+						</div>
+						<p>
+							<strong>Finding Information Quickly</strong><br />
+							For quick on-page search, utilize the
+							<strong>Ctrl+F</strong> shortcut. This command opens a search bar
+							in your browser, allowing for immediate keyword location.
+						</p>
+						<p>
+							<strong>Adjusting Page Zoom</strong><br />
+							By pressing <strong>Ctrl</strong> and <strong>+</strong> key, you
+							can zoom in on a page, making text and images larger and easier to
+							see. Conversely, using <strong>Ctrl</strong> and
+							<strong>-</strong> key will zoom out, allowing you to see more of
+							the page at once. You can always reset the zoom level to the
+							default setting by pressing <strong>Ctrl</strong> and
+							<strong>0</strong>.
+						</p>
+						<br /><br /><br /><br /><br /><br /><br />
+					</section>
+					<div class="sb sb-3">
+						<hr class="section-break-3" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/main.js?ver=1.2"></script>
+	</body>
+</html>
