@@ -572,21 +572,29 @@ body {
 }
 
 .img-wrapper {
+	position: relative;
 	width: 100%;
+	margin: 1rem 0;
 }
 #content .img-skeleton {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	border-radius: 8px;
 
-	margin: 1rem auto;
+	margin: 0 auto;
 	display: block;
 	background-color: #f0f0f0;
 	animation: skeleton-pulse 1.5s infinite ease-in-out;
-	width: 100%;
+
+	z-index: 1;
 }
 #content img {
 	border-radius: 8px;
 	max-width: 100%;
-	margin: 1rem auto;
+	margin: 0 auto;
 	display: block;
 	background-color: inherit;
 }

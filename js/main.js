@@ -37,66 +37,7 @@ document.querySelectorAll("#sidebar a").forEach((link) => {
 	});
 });
 
-// document.querySelectorAll("#sidebar a").forEach((link) => {
-// 	link.addEventListener("click", function (e) {
-// 		e.preventDefault();
-// 		let targetId = this.getAttribute("href");
-// 		let targetElement = document.querySelector(targetId);
-
-// 		if (targetElement) {
-// 			currentSectionInView = targetElement;
-
-// 			const images = Array.from(targetElement.querySelectorAll("img"));
-
-// 			if (images.length === 0) {
-// 				targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-// 				return;
-// 			}
-
-// 			const imagePromises = images.map((img) => {
-// 				return new Promise((resolve, reject) => {
-// 					const onComplete = () => resolve();
-// 					const onError = () => resolve(); // Важно: не reject, а resolve!
-
-// 					img.addEventListener("load", onComplete);
-// 					img.addEventListener("error", onError);
-
-// 					if (img.complete) {
-// 						if (img.decode) {
-// 							img.decode().then(onComplete, onError);
-// 						} else {
-// 							onComplete();
-// 						}
-// 					} else if (img.decode) {
-// 						img.decode().then(onComplete, onError).catch(onError);
-// 					} else {
-// 						// Если decode не поддерживается, просто ждем load/error
-// 					}
-
-// 					setTimeout(() => {
-// 						reject(new Error("Image load timeout"));
-// 					}, 5000);
-// 				});
-// 			});
-
-// 			Promise.all(imagePromises)
-// 				.catch((error) => {
-// 					console.warn("Some images failed to load", error);
-// 				})
-// 				.finally(() => {
-// 					requestAnimationFrame(() => {
-// 						targetElement.scrollIntoView({
-// 							behavior: "smooth",
-// 							block: "start",
-// 						});
-// 					});
-// 				});
-// 		}
-// 	});
-// });
-
 // SIDEBAR OPEN ========================
-
 
 document.addEventListener("DOMContentLoaded", function () {
 	const button = document.getElementById("sidebar-toggleButton");
@@ -316,9 +257,7 @@ const getStartSideBarDropDown = document.querySelector(
 	".get-start-sidebar-dropDown"
 );
 document.addEventListener("DOMContentLoaded", function () {
-	setTimeout(() => {
-		document.body.classList.toggle("sidebar-hide");
-	}, 0);
+	document.body.classList.toggle("sidebar-hide");
 
 	setTimeout(() => {
 		openSideBarItem(getStartSideBarDropDown);
@@ -365,89 +304,39 @@ tags.forEach((tag) => {
 
 // !   IMG RESPONSIVE SKELETON
 
-// const images = document.querySelectorAll(".img-wrapper");
 
-// images.forEach((wrapper) => {
-// 	const img = wrapper.querySelector("img");
-// 	const width = img.width;
-// 	const height = img.height;
-
-// 	// Устанавливаем размеры для aspect-ratio в родительском элементе
-// 	wrapper.style.setProperty("--width", width);
-// 	wrapper.style.setProperty("--height", height);
-
-// 	// Обработчик события загрузки для lazy-загружаемых изображений
-// 	img.addEventListener("load", () => {
-// 		img.classList.add("loaded"); // Добавляем класс loaded для отображения картинки
-// 		const skeleton = wrapper.querySelector(".img-skeleton");
-// 		skeleton.style.display = "none"; // Скрываем скелетон
-// 	});
-
-// 	// Обработчик ошибки загрузки изображения (если нужно)
-// 	img.addEventListener("error", () => {
-// 		console.error("Ошибка загрузки изображения");
-// 		// Можно скрыть скелетон или показать сообщение об ошибке
-// 	});
-// });
-// ================================================================
 const imgWrappers = document.querySelectorAll("#content .img-wrapper");
 
-imgWrappers.forEach((el) => {
-	const img = el.firstElementChild;
-	const skeleton = el.lastElementChild;
+function updateSkeletonHeight(imageContainer) {
+	const img = imageContainer.firstElementChild;
+	const skeleton = imageContainer.lastElementChild;
+	const aspectWidth = parseInt(imageContainer.dataset.aspectWidth);
+	const aspectHeight = parseInt(imageContainer.dataset.aspectHeight);
+	const parentWidth = parseFloat(
+		getComputedStyle(imageContainer).width.slice(0, -2)
+	);
 
-	// const width = img.getAttribute("width");
-	// const height = img.getAttribute("height");
-
-	// skeleton.style.aspectRatio = `${width} / ${height}`;
-	// skeleton.style.maxWidth = `${width}px`;
-
-	// img.addEventListener("load", () => {
-	// 	skeleton.style.display = "none";
-	// });
-
-	// img.addEventListener("error", () => {
-	// 	console.error(`error during loading of ${img.src}`);
-	// 	img.style.display = "none";
-	// });
-
-	const aspectWidth = parseInt(el.dataset.aspectWidth);
-	const aspectHeight = parseInt(el.dataset.aspectHeight);
-	const parentWidth = el.offsetWidth;
-	console.log(parentWidth);
-	if (aspectWidth && aspectHeight) {
-		// const aspectRatio = aspectWidth / aspectHeight;
+	if (aspectWidth && aspectHeight && parentWidth > 0) {
 		skeleton.style.maxWidth = `${aspectWidth}px`;
 		skeleton.style.maxHeight = `${aspectHeight}px`;
-	} else {
-		console.warn(
-			`Атрибути data-aspect-width або data-aspect-height не знайдено для контейнера:`
-		);
+		const skeletonComputedHeight = (parentWidth * aspectHeight) / aspectWidth;
+		skeleton.style.height = `${skeletonComputedHeight}px`;
 	}
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+	imgWrappers.forEach((el) => {
+		const img = el.firstElementChild;
+		const skeleton = el.lastElementChild;
+
+		updateSkeletonHeight(el); 
+
+		img.addEventListener("load", () => {
+			skeleton.style.display = "none";
+		});
+	});
+
+	window.addEventListener("resize", () => {
+		imgWrappers.forEach(updateSkeletonHeight);
+	});
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-// 	const imageContainers = document.querySelectorAll(".image-container");
-
-// 	imageContainers.forEach((container) => {
-// 		const skeleton = container.querySelector(".skeleton");
-// 		const aspectWidth = parseInt(container.dataset.aspectWidth);
-// 		const aspectHeight = parseInt(container.dataset.aspectHeight);
-
-// 		if (aspectWidth && aspectHeight) {
-// 			const aspectRatio = aspectWidth / aspectHeight;
-// 			skeleton.style.paddingBottom = `${(1 / aspectRatio) * 100}%`;
-// 			skeleton.style.position = "relative";
-// 		} else {
-// 			console.warn(
-// 				`Атрибути data-aspect-width або data-aspect-height не знайдено для контейнера:`,
-// 				container
-// 			);
-// 		}
-
-// 		const img = container.querySelector(".lazy-image");
-// 		img.addEventListener("load", () => {
-// 			img.classList.add("loaded");
-// 		});
-// 	});
-// });
