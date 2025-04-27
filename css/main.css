@@ -571,7 +571,7 @@ body {
 	justify-content: center;
 }
 
-.img-wrapper {
+/* .img-wrapper {
 	position: relative;
 	width: 100%;
 	margin: 1rem 0;
@@ -590,7 +590,7 @@ body {
 	animation: skeleton-pulse 1.5s infinite ease-in-out;
 
 	z-index: 1;
-}
+} */
 #content img {
 	border-radius: 8px;
 	max-width: 100%;

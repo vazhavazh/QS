@@ -1,8 +1,8 @@
 let currentSectionInView = null;
 
-document.querySelectorAll("img").forEach((img) => {
-	img.loading = "lazy";
-});
+// document.querySelectorAll("img").forEach((img) => {
+// 	img.loading = "lazy";
+// });
 
 // THEME TOGGLE ===================
 
@@ -305,38 +305,38 @@ tags.forEach((tag) => {
 // !   IMG RESPONSIVE SKELETON
 
 
-const imgWrappers = document.querySelectorAll("#content .img-wrapper");
+// const imgWrappers = document.querySelectorAll("#content .img-wrapper");
 
-function updateSkeletonHeight(imageContainer) {
-	const img = imageContainer.firstElementChild;
-	const skeleton = imageContainer.lastElementChild;
-	const aspectWidth = parseInt(imageContainer.dataset.aspectWidth);
-	const aspectHeight = parseInt(imageContainer.dataset.aspectHeight);
-	const parentWidth = parseFloat(
-		getComputedStyle(imageContainer).width.slice(0, -2)
-	);
+// function updateSkeletonHeight(imageContainer) {
+// 	const img = imageContainer.firstElementChild;
+// 	const skeleton = imageContainer.lastElementChild;
+// 	const aspectWidth = parseInt(imageContainer.dataset.aspectWidth);
+// 	const aspectHeight = parseInt(imageContainer.dataset.aspectHeight);
+// 	const parentWidth = parseFloat(
+// 		getComputedStyle(imageContainer).width.slice(0, -2)
+// 	);
 
-	if (aspectWidth && aspectHeight && parentWidth > 0) {
-		skeleton.style.maxWidth = `${aspectWidth}px`;
-		skeleton.style.maxHeight = `${aspectHeight}px`;
-		const skeletonComputedHeight = (parentWidth * aspectHeight) / aspectWidth;
-		skeleton.style.height = `${skeletonComputedHeight}px`;
-	}
-}
+// 	if (aspectWidth && aspectHeight && parentWidth > 0) {
+// 		skeleton.style.maxWidth = `${aspectWidth}px`;
+// 		skeleton.style.maxHeight = `${aspectHeight}px`;
+// 		const skeletonComputedHeight = (parentWidth * aspectHeight) / aspectWidth;
+// 		skeleton.style.height = `${skeletonComputedHeight}px`;
+// 	}
+// }
 
-document.addEventListener("DOMContentLoaded", function () {
-	imgWrappers.forEach((el) => {
-		const img = el.firstElementChild;
-		const skeleton = el.lastElementChild;
+// document.addEventListener("DOMContentLoaded", function () {
+// 	imgWrappers.forEach((el) => {
+// 		const img = el.firstElementChild;
+// 		const skeleton = el.lastElementChild;
 
-		updateSkeletonHeight(el); 
+// 		updateSkeletonHeight(el); 
 
-		img.addEventListener("load", () => {
-			skeleton.style.display = "none";
-		});
-	});
+// 		img.addEventListener("load", () => {
+// 			skeleton.style.display = "none";
+// 		});
+// 	});
 
-	window.addEventListener("resize", () => {
-		imgWrappers.forEach(updateSkeletonHeight);
-	});
-});
+// 	window.addEventListener("resize", () => {
+// 		imgWrappers.forEach(updateSkeletonHeight);
+// 	});
+// });
