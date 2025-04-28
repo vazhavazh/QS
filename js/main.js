@@ -1,9 +1,5 @@
 let currentSectionInView = null;
 
-// document.querySelectorAll("img").forEach((img) => {
-// 	img.loading = "lazy";
-// });
-
 // THEME TOGGLE ===================
 
 const themeToggle = document.getElementById("themeToggle");
@@ -256,15 +252,18 @@ faqListElem.addEventListener("click", (event) => {
 const getStartSideBarDropDown = document.querySelector(
 	".get-start-sidebar-dropDown"
 );
+const openSideBarButtonWrapper = document.querySelector(
+	".sidebar-toggleButton-wrapper"
+);
 document.addEventListener("DOMContentLoaded", function () {
 	document.body.classList.toggle("sidebar-hide");
-
+	openSideBarButtonWrapper.classList.add("open");
 	setTimeout(() => {
 		openSideBarItem(getStartSideBarDropDown);
 	}, 600);
 });
 
-// !!!!!!!!!!! intersection observer animation
+// !!!!!!!!!!! intersection observer for animation
 
 const observer = new IntersectionObserver(
 	(entries) => {
@@ -286,16 +285,22 @@ const observer = new IntersectionObserver(
 
 const tags = document.querySelectorAll(
 	`
-	#content section h2,
+	 .header,
+	 .header .greetings .greetings-text,
+	 #content section h2,
 	 #content section h3,
 	 #content h4,
 	 #about #logo, 
 	 #content section p,
 	 #content section ul,
-	  #content section ol,
-	  #content section .info,
-	  #content section .note,
-	  #content strong
+	 #content section ol,
+	 #content section .info::before,
+	 #content section .note::before,
+	 #content section .info,
+	 #content section .note,
+	 #content strong,
+	 #content img
+	  
 	 `
 );
 tags.forEach((tag) => {
@@ -303,7 +308,6 @@ tags.forEach((tag) => {
 });
 
 // !   IMG RESPONSIVE SKELETON
-
 
 // const imgWrappers = document.querySelectorAll("#content .img-wrapper");
 
@@ -329,7 +333,7 @@ tags.forEach((tag) => {
 // 		const img = el.firstElementChild;
 // 		const skeleton = el.lastElementChild;
 
-// 		updateSkeletonHeight(el); 
+// 		updateSkeletonHeight(el);
 
 // 		img.addEventListener("load", () => {
 // 			skeleton.style.display = "none";
