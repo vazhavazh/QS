@@ -40,29 +40,58 @@
 				</span>
 			</div>
 			<div class="header-right-wrapper">
-				
-					<input
-						type="checkbox"
-						class="theme-checkbox"
-						id="themeToggle" />
-					<label
-						for="themeToggle"
-						class="theme-checkbox-label">
-						<svg viewBox="0 0 512 512">
-							<use href="/images/sprite/sprite.svg#moon"></use>
-						</svg>
-						<svg
-							fill="#ffe928"
-							viewBox="0 0 457.32 457.32"
-							xml:space="preserve">
-							<use href="/images/sprite/sprite.svg#sun"></use>
-						</svg>
-						<span class="ball"></span>
-					</label>
-				
+				<input
+					type="checkbox"
+					class="theme-checkbox"
+					id="themeToggle" />
+				<label
+					for="themeToggle"
+					class="theme-checkbox-label">
+					<svg viewBox="0 0 512 512">
+						<use href="/images/sprite/sprite.svg#moon"></use>
+					</svg>
+					<svg
+						fill="#ffe928"
+						viewBox="0 0 457.32 457.32"
+						xml:space="preserve">
+						<use href="/images/sprite/sprite.svg#sun"></use>
+					</svg>
+					<span class="ball"></span>
+				</label>
 			</div>
 		</header>
-
+		<!-- <div id="search-section"> -->
+		<!-- <div class="search-container">
+							<label class="searchInput-label">
+								<input
+									type="text"
+									id="searchInput"
+									placeholder="Search..." />
+							</label>
+							<button id="searchButton">Search</button>
+						</div> -->
+		<form class="form">
+			<div class="fx fx-gap">
+				<div>
+					<input
+						class="input"
+						id="newSearch"
+						type="text"
+						placeholder="Search"
+						required />
+				</div>
+				<div id="search-icon">
+					<button
+						class="button"
+						type="submit">
+						<div id="search-icon-circle"></div>
+						<span class=""></span>
+					</button>
+				</div>
+			</div>
+		</form>
+		<!-- <div id="searchResults"></div> -->
+		<!-- </div> -->
 		<div id="wrap">
 			<div class="sidebar-toggleButton-wrapper">
 				<button id="sidebar-toggleButton">
@@ -240,9 +269,7 @@
 						class="section"
 						id="about">
 						<div class="start">
-							<h2 class="first-tag">
-								Getting started <span class="neon-text">▶️</span>
-							</h2>
+							<h2 class="first-tag">Getting started ▶️</h2>
 						</div>
 						<div class="title-line">
 							<h3 class=""><span>About I-Deviator</span></h3>
@@ -603,9 +630,8 @@
 							src="images/mb-managemet-board.png"
 							alt="Management Board" />
 
-						<div class="title-line">
-							<h3><span>Management Toolbar</span></h3>
-						</div>
+						<h4><span>Management Toolbar</span></h4>
+
 						<p>
 							For straightforward and convenient navigation through the
 							<strong>Management Board</strong> and internal screens, the
@@ -659,9 +685,8 @@
 							src="images/mb-fleet-list.png"
 							alt="Fleet list" />
 
-						<div class="title-line">
-							<h3><span>Search Function</span></h3>
-						</div>
+						<h4><span>Search Function</span></h4>
+
 						<p>
 							To quickly find a specific vessel by name or IMO number, use the
 							search panel displayed above the fleet list. Enter your query and
@@ -680,7 +705,7 @@
 							alt="Reset search" />
 
 						<div class="title-line">
-							<h3><span>Favorites Function</span></h3>
+							<h4><span>Favorites Function</span></h4>
 						</div>
 						<p>
 							You can add a vessel to your favorites by clicking the
@@ -774,9 +799,8 @@
 							src="images/mb-vessel-card.png"
 							alt="Vessel card" />
 
-						<div class="title-line">
-							<h3><span>General Information</span></h3>
-						</div>
+						<h4><span>General Information</span></h4>
+
 						<p>
 							At the top the following information and options are displayed:
 						</p>
@@ -793,7 +817,7 @@
 						</p>
 
 						<div class="title-line">
-							<h3><span>Compass Error Log Book Block</span></h3>
+							<h4><span>Compass Error Log Book Block</span></h4>
 						</div>
 						<img
 							src="images/mb-logbook-block.png"
@@ -859,9 +883,8 @@
 							</li>
 						</ul>
 
-						<div class="title-line">
-							<h3><span>Magnetic Compass Adjustment Block</span></h3>
-						</div>
+						<h4><span>Magnetic Compass Adjustment Block</span></h4>
+
 						<img
 							src="images/mb-adjustment-block.png"
 							alt="Magnetic Compass Adjustment block " />
@@ -1005,13 +1028,6 @@
 						class="section"
 						id="general-info">
 						<div class="start">
-							<!-- <svg
-										width="18"
-										height="18"
-										viewBox="0 0 53 58"
-										fill="currentColor">
-										<use href="/images/sprite/sprite.svg#arrowSprite"></use>
-									</svg> -->
 							<h2>Magnetic Compass 🧭 Adjustment</h2>
 						</div>
 						<div class="title-line">
@@ -2165,9 +2181,8 @@
 						</p>
 						<p>Let's take a closer look at them:</p>
 
-						<div class="title-line">
-							<h3><span>Deviation Card Log Block</span></h3>
-						</div>
+						<h4><span>Deviation Card Log Block</span></h4>
+
 						<p>
 							Deviation Card Log is used to record the received deviation cards
 							of the vessel, as well as to calculate the Correlation Value field
@@ -2193,11 +2208,9 @@
 							adjuster - a manual entry must be added to the log.
 						</p>
 
-						<div class="title-line">
-							<h3>
-								<span>Manually adding an record to the Deviation Card Log</span>
-							</h3>
-						</div>
+						<h4>
+							<span>Manually adding an record to the Deviation Card Log</span>
+						</h4>
 
 						<ol>
 							<li>

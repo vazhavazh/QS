@@ -344,3 +344,77 @@ tags.forEach((tag) => {
 // 		imgWrappers.forEach(updateSkeletonHeight);
 // 	});
 // });
+
+
+// ********************************************************
+
+// SEARCH FUNCTIONALITY ====================
+
+
+
+// const searchInput = document.getElementById('searchInput');
+// const searchButton = document.getElementById('searchButton');
+// const searchResultsDiv = document.getElementById('searchResults');
+
+// const findTextInSections = (searchText) => {
+//     const results = [];
+//     document.querySelectorAll('#content section').forEach(section => {
+//         if (section.textContent.toLowerCase().includes(searchText.toLowerCase())) {
+//             const sectionId = section.id;
+//             const sectionTitle = section.querySelector('h2, h3')?.textContent || `Section: ${sectionId}`;
+//             const sectionText = getClosestText(section, searchText);
+//             results.push({ id: sectionId, title: sectionTitle, text: sectionText });
+//         }
+//     });
+//     return results;
+// };
+
+// const getClosestText = (section, searchText) => {
+//     const p = section.querySelector('p');
+//     if (p) {
+//         let text = p.textContent.trim();
+//         // Якщо текст занадто довгий, обрізаємо його
+//         if (text.length > 100) {
+//             const index = text.toLowerCase().indexOf(searchText.toLowerCase());
+//             if (index > 50) {
+//                 text = '...' + text.substring(index - 50, index + 50) + '...';
+//             } else {
+//                 text = text.substring(0, 100) + '...';
+//             }
+//         }
+//         return text;
+//     }
+//     return ''; // Повертаємо порожній рядок, якщо <p> не знайдено
+// };
+
+// const displayResults = (results) => {
+//     searchResultsDiv.innerHTML = ''; // Clear previous results
+//     if (results.length === 0) {
+//         searchResultsDiv.innerHTML = '<p>No results found.</p>';
+//         return;
+//     }
+//     const resultsHTML = results.map(result => `
+//         <div class="search-result-item">
+//             <a href="#${result.id}">${result.title}</a>
+//             <p class="search-result-text">${result.text}</p>
+//         </div>
+//     `).join('');
+//     searchResultsDiv.innerHTML = resultsHTML;
+// };
+
+// const handleSearch = () => {
+//     const searchText = searchInput.value;
+//     if (searchText.trim() !== '') {
+//         const results = findTextInSections(searchText);
+//         displayResults(results);
+//     } else {
+//         searchResultsDiv.innerHTML = '<p>Please enter a search term.</p>';
+//     }
+// };
+
+// searchButton.addEventListener('click', handleSearch);
+// searchInput.addEventListener('keypress', (event) => {
+//     if (event.key === 'Enter') {
+//         handleSearch();
+//     }
+// });
