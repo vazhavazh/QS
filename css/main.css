@@ -1312,7 +1312,6 @@ h4.in-view,
 	background-color: var(--main-color);
 }
 
-
 #search-results {
 	border-radius: 8px;
 	margin-top: 20px;
@@ -1340,4 +1339,4 @@ h4.in-view,
 	font-size: 0.9rem;
 	color: var(--hover-btn-color);
 	margin-top: 5px;
-} 
+}
