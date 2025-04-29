@@ -21,7 +21,7 @@
 			href="images/favicon-32x32.png" />
 	</head>
 
-	<body class="sidebar-hide">
+	<body class="">
 		<header class="header">
 			<div class="header-left-wrapper">
 				<a href="https://www.i-deviator.cz/">
@@ -70,30 +70,29 @@
 							</label>
 							<button id="searchButton">Search</button>
 						</div> -->
-		<form class="form">
-			<div class="fx fx-gap">
-				<div>
-					<input
-						class="input"
-						id="newSearch"
-						type="text"
-						placeholder="Search"
-						required />
-				</div>
+		<div class="search-container">
+			<div class="search-input-wrapper">
+				<input
+					id="search-input"
+					type="text"
+					placeholder="Search"
+					required />
+
 				<div id="search-icon">
 					<button
-						class="button"
-						type="submit">
+						
+						id="search-button">
 						<div id="search-icon-circle"></div>
 						<span class=""></span>
 					</button>
 				</div>
 			</div>
-		</form>
-		<!-- <div id="searchResults"></div> -->
+			<div id="search-results"></div>
+		</div>
+
 		<!-- </div> -->
 		<div id="wrap">
-			<div class="sidebar-toggleButton-wrapper">
+			<div class="sidebar-toggleButton-wrapper open">
 				<button id="sidebar-toggleButton">
 					<svg
 						id="arrowIcon"

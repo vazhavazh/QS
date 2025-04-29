@@ -39,7 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const button = document.getElementById("sidebar-toggleButton");
 	button.addEventListener("click", () => {
 		document.body.classList.toggle("sidebar-hide");
-		currentSectionInView.scrollIntoView({ behavior: "smooth", block: "start" });
+		currentSectionInView?.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
 	});
 });
 
@@ -249,22 +252,14 @@ faqListElem.addEventListener("click", (event) => {
 });
 
 // INITIAL ANIMATIONS ============================ //
+
+// !!!!!!!!!!! intersection observer for animation
 const getStartSideBarDropDown = document.querySelector(
 	".get-start-sidebar-dropDown"
 );
 const openSideBarButtonWrapper = document.querySelector(
 	".sidebar-toggleButton-wrapper"
 );
-document.addEventListener("DOMContentLoaded", function () {
-	document.body.classList.toggle("sidebar-hide");
-	openSideBarButtonWrapper.classList.add("open");
-	setTimeout(() => {
-		openSideBarItem(getStartSideBarDropDown);
-	}, 600);
-});
-
-// !!!!!!!!!!! intersection observer for animation
-
 const observer = new IntersectionObserver(
 	(entries) => {
 		entries.forEach((entry) => {
@@ -345,76 +340,78 @@ tags.forEach((tag) => {
 // 	});
 // });
 
-
 // ********************************************************
 
 // SEARCH FUNCTIONALITY ====================
 
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+const searchResultsDiv = document.getElementById("search-results");
 
+const findTextInSections = (searchText) => {
+	const results = [];
+	document.querySelectorAll("#content section").forEach((section) => {
+		if (section.textContent.toLowerCase().includes(searchText.toLowerCase())) {
+			const sectionId = section.id;
+			const sectionTitle =
+				section.querySelector("h2, h3")?.textContent || `Section: ${sectionId}`;
+			const sectionText = getClosestText(section, searchText);
+			results.push({ id: sectionId, title: sectionTitle, text: sectionText });
+		}
+	});
+	return results;
+};
 
-// const searchInput = document.getElementById('searchInput');
-// const searchButton = document.getElementById('searchButton');
-// const searchResultsDiv = document.getElementById('searchResults');
+const getClosestText = (section, searchText) => {
+	const p = section.querySelector("p");
+	if (p) {
+		let text = p.textContent.trim();
+		// Якщо текст занадто довгий, обрізаємо його
+		if (text.length > 100) {
+			const index = text.toLowerCase().indexOf(searchText.toLowerCase());
+			if (index > 50) {
+				text = "..." + text.substring(index - 50, index + 50) + "...";
+			} else {
+				text = text.substring(0, 100) + "...";
+			}
+		}
+		return text;
+	}
+	return ""; // Повертаємо порожній рядок, якщо <p> не знайдено
+};
 
-// const findTextInSections = (searchText) => {
-//     const results = [];
-//     document.querySelectorAll('#content section').forEach(section => {
-//         if (section.textContent.toLowerCase().includes(searchText.toLowerCase())) {
-//             const sectionId = section.id;
-//             const sectionTitle = section.querySelector('h2, h3')?.textContent || `Section: ${sectionId}`;
-//             const sectionText = getClosestText(section, searchText);
-//             results.push({ id: sectionId, title: sectionTitle, text: sectionText });
-//         }
-//     });
-//     return results;
-// };
+const displayResults = (results) => {
+	searchResultsDiv.innerHTML = ""; // Clear previous results
+	if (results.length === 0) {
+		searchResultsDiv.innerHTML = "<p>No results found.</p>";
+		return;
+	}
+	const resultsHTML = results
+		.map(
+			(result) => `
+        <div class="search-result-item">
+            <a href="#${result.id}">${result.title}</a>
+            <p class="search-result-text">${result.text}</p>
+        </div>
+    `
+		)
+		.join("");
+	searchResultsDiv.innerHTML = resultsHTML;
+};
 
-// const getClosestText = (section, searchText) => {
-//     const p = section.querySelector('p');
-//     if (p) {
-//         let text = p.textContent.trim();
-//         // Якщо текст занадто довгий, обрізаємо його
-//         if (text.length > 100) {
-//             const index = text.toLowerCase().indexOf(searchText.toLowerCase());
-//             if (index > 50) {
-//                 text = '...' + text.substring(index - 50, index + 50) + '...';
-//             } else {
-//                 text = text.substring(0, 100) + '...';
-//             }
-//         }
-//         return text;
-//     }
-//     return ''; // Повертаємо порожній рядок, якщо <p> не знайдено
-// };
+const handleSearch = () => {
+	const searchText = searchInput.value;
+	if (searchText.trim() !== "") {
+		const results = findTextInSections(searchText);
+		displayResults(results);
+	} else {
+		searchResultsDiv.innerHTML = "<p>Please enter a search term.</p>";
+	}
+};
 
-// const displayResults = (results) => {
-//     searchResultsDiv.innerHTML = ''; // Clear previous results
-//     if (results.length === 0) {
-//         searchResultsDiv.innerHTML = '<p>No results found.</p>';
-//         return;
-//     }
-//     const resultsHTML = results.map(result => `
-//         <div class="search-result-item">
-//             <a href="#${result.id}">${result.title}</a>
-//             <p class="search-result-text">${result.text}</p>
-//         </div>
-//     `).join('');
-//     searchResultsDiv.innerHTML = resultsHTML;
-// };
-
-// const handleSearch = () => {
-//     const searchText = searchInput.value;
-//     if (searchText.trim() !== '') {
-//         const results = findTextInSections(searchText);
-//         displayResults(results);
-//     } else {
-//         searchResultsDiv.innerHTML = '<p>Please enter a search term.</p>';
-//     }
-// };
-
-// searchButton.addEventListener('click', handleSearch);
-// searchInput.addEventListener('keypress', (event) => {
-//     if (event.key === 'Enter') {
-//         handleSearch();
-//     }
-// });
+searchButton.addEventListener("click", handleSearch);
+searchInput.addEventListener("keypress", (event) => {
+	if (event.key === "Enter") {
+		handleSearch();
+	}
+});

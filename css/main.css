@@ -348,7 +348,7 @@ body {
 	background-color: transparent;
 	justify-content: center;
 	width: 30px;
-	padding-left: 0.25rem;
+	/* padding-left: 0.25rem; */
 	/* color: var(--disabled-color) */
 }
 
@@ -625,7 +625,7 @@ body {
 #content img {
 	border-radius: 8px;
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 1rem auto;
 	display: block;
 	background-color: inherit;
 }
@@ -1136,84 +1136,100 @@ h4.in-view,
 	cursor: pointer;
 }
 
-#searchResults {
-	margin-top: 20px;
-	padding: 10px;
-	border: 1px solid #eee;
-	border-radius: 5px;
-}
+*/
 
-.search-result-item {
-	padding: 10px 0;
-	border-bottom: 1px solid #eee;
-}
-
-.search-result-item a {
-	text-decoration: none;
-	color: #333;
-}
-
-.search-result-item:last-child {
-	border-bottom: none;
-}
-
-.search-result-text {
-	font-size: 0.9em;
-	color: #666;
-	margin-top: 5px;
-} */
-
-.fx {
-	display: flex;
-}
-
-.fx-gap {
-	gap: 18px;
-}
-
-.input,
-.button {
-	color: var(--main-color);
-	padding: 0;
-	margin: 0;
-	border: 0;
-	background-color: transparent;
-	outline: none;
-}
-.sidebar-hide .form {
-	left: 50%;
-	width: 400px;
-}
-
-.form {
+.search-container {
 	z-index: 9999;
 	position: fixed;
-	top: 3.6rem;
+	top: 3.7rem;
 	left: 0;
 	left: 71%;
 	width: 300px;
 	height: 88px;
 	padding: 0 16px 0 16px;
-	
-	background-color: transparent;
+
+	background-color: var(--bg-color);
 	border-radius: 20px;
 	box-shadow: 0 5px 20px var(--border), 0 0 0 10px var(--bg-color);
 	transform: translate(-50%) scale(0.5);
-	transition: left 0.4s ease;
+	transition: left 0.4s ease, transform 0.4s easy;
 }
 
-.input[type="text"] {
+.search-container:focus-within {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+	transform: translate(-50%) scale(0.6);
+}
+@media screen and (min-width: 768px) {
+	.search-container {
+		width: 600px;
+		left: 60%;
+		transform: translate(-50%) scale(0.6);
+	}
+	.search-container:focus-within {
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+		transform: translate(-50%) scale(0.7);
+	}
+}
+@media screen and (min-width: 1200px) {
+	.search-container {
+		width: 900px;
+		left: 58%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.search-container {
+		left: 55%;
+	}
+}
+
+.search-input-wrapper {
+	display: flex;
+	gap: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+	.search-input-wrapper {
+		justify-content: space-between;
+	}
+}
+
+#search-input,
+#search-button {
+	color: var(--main-color);
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: var(--bg-color);
+	outline: none;
+}
+.sidebar-hide .search-container {
+	left: 50%;
+	width: 400px;
+}
+@media screen and (min-width: 768px) {
+	.sidebar-hide .search-container {
+		width: 600px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.sidebar-hide .search-container {
+		width: 900px;
+	}
+}
+
+#search-input[type="text"] {
 	width: 100%;
 	height: 88px;
 	font-size: 42px;
 	line-height: 1;
 }
 
-.input[type="text"]::placeholder {
+#search-input[type="text"]::placeholder {
 	color: var(--main-color);
 }
 
-.button {
+#search-button {
 	position: relative;
 	display: block;
 	width: 84px;
@@ -1230,12 +1246,12 @@ h4.in-view,
 	margin-top: 0;
 	border-width: 15px;
 	border: 8px solid var(--main-color);
-	background-color: transparent;
+	background-color: var(--bg-color);
 	border-radius: 50%;
 	transition: 0.5s ease all;
 }
 
-.button span {
+#search-button span {
 	position: absolute;
 	top: 68px;
 	left: 43px;
@@ -1248,8 +1264,8 @@ h4.in-view,
 	transition: 0.5s ease all;
 }
 
-.button span:before,
-.button span:after {
+#search-button span:before,
+#search-button span:after {
 	content: "";
 	position: absolute;
 	bottom: -12px;
@@ -1294,3 +1310,31 @@ h4.in-view,
 	width: 40px;
 	background-color: var(--main-color);
 }
+
+
+#searchResults {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+.search-result-item {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.search-result-item a {
+	text-decoration: none;
+	color: #333;
+}
+
+.search-result-item:last-child {
+	border-bottom: none;
+}
+
+.search-result-text {
+	font-size: 0.9em;
+	color: #666;
+	margin-top: 5px;
+} 
