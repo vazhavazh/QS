@@ -1,4 +1,5 @@
-let currentSectionInView = null;
+let currentSectionInView = null; // will be used when open or close sidebar, focus on searchbar
+
 // THEME TOGGLE ===================
 
 const themeToggle = document.getElementById("themeToggle");
@@ -279,9 +280,7 @@ const observer = new IntersectionObserver(
 
 const tags = document.querySelectorAll(
 	`
-	 .header,
-	 .header .greetings .greetings-text,
-	 
+	 #search-container,
 	 #content section h2,
 	 #content section h3,
 	 #content h4,
@@ -295,7 +294,6 @@ const tags = document.querySelectorAll(
 	 #content section .note,
 	 #content strong,
 	 #content img
-	  
 	 `
 );
 tags.forEach((tag) => {
@@ -318,6 +316,10 @@ const closeSearchResultsBtn = document.querySelector(
 
 searchInput.addEventListener("focus", () => {
 	document.body.classList.add("sidebar-hide");
+	currentSectionInView?.scrollIntoView({
+		behavior: "smooth",
+		block: "start",
+	});
 });
 
 const findTextInSections = (searchText) => {
@@ -400,7 +402,7 @@ const handleSearch = () => {
 				}
 				setTimeout(() => {
 					closeSearchResults();
-				}, 500);
+				}, 800);
 			});
 		});
 	} else {
