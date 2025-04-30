@@ -1,5 +1,4 @@
 let currentSectionInView = null;
-
 // THEME TOGGLE ===================
 
 const themeToggle = document.getElementById("themeToggle");
@@ -282,6 +281,7 @@ const tags = document.querySelectorAll(
 	`
 	 .header,
 	 .header .greetings .greetings-text,
+	 
 	 #content section h2,
 	 #content section h3,
 	 #content h4,
@@ -302,44 +302,6 @@ tags.forEach((tag) => {
 	observer.observe(tag);
 });
 
-// !   IMG RESPONSIVE SKELETON
-
-// const imgWrappers = document.querySelectorAll("#content .img-wrapper");
-
-// function updateSkeletonHeight(imageContainer) {
-// 	const img = imageContainer.firstElementChild;
-// 	const skeleton = imageContainer.lastElementChild;
-// 	const aspectWidth = parseInt(imageContainer.dataset.aspectWidth);
-// 	const aspectHeight = parseInt(imageContainer.dataset.aspectHeight);
-// 	const parentWidth = parseFloat(
-// 		getComputedStyle(imageContainer).width.slice(0, -2)
-// 	);
-
-// 	if (aspectWidth && aspectHeight && parentWidth > 0) {
-// 		skeleton.style.maxWidth = `${aspectWidth}px`;
-// 		skeleton.style.maxHeight = `${aspectHeight}px`;
-// 		const skeletonComputedHeight = (parentWidth * aspectHeight) / aspectWidth;
-// 		skeleton.style.height = `${skeletonComputedHeight}px`;
-// 	}
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-// 	imgWrappers.forEach((el) => {
-// 		const img = el.firstElementChild;
-// 		const skeleton = el.lastElementChild;
-
-// 		updateSkeletonHeight(el);
-
-// 		img.addEventListener("load", () => {
-// 			skeleton.style.display = "none";
-// 		});
-// 	});
-
-// 	window.addEventListener("resize", () => {
-// 		imgWrappers.forEach(updateSkeletonHeight);
-// 	});
-// });
-
 // ********************************************************
 
 // SEARCH FUNCTIONALITY ====================
@@ -347,6 +309,16 @@ tags.forEach((tag) => {
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const searchResultsDiv = document.getElementById("search-results");
+const searchResultsDivWrapper = document.querySelector(
+	".search-results-wrapper"
+);
+const closeSearchResultsBtn = document.querySelector(
+	".search-results-close-btn"
+);
+
+searchInput.addEventListener("focus", () => {
+	document.body.classList.add("sidebar-hide");
+});
 
 const findTextInSections = (searchText) => {
 	const results = [];
@@ -363,25 +335,28 @@ const findTextInSections = (searchText) => {
 };
 
 const getClosestText = (section, searchText) => {
+	console.log(section);
 	const p = section.querySelector("p");
 	if (p) {
 		let text = p.textContent.trim();
-		// Якщо текст занадто довгий, обрізаємо його
-		if (text.length > 100) {
+
+		if (text.length > 200) {
 			const index = text.toLowerCase().indexOf(searchText.toLowerCase());
-			if (index > 50) {
-				text = "..." + text.substring(index - 50, index + 50) + "...";
+			if (index > 100) {
+				text = "..." + text.substring(index - 100, index + 100) + "...";
 			} else {
-				text = text.substring(0, 100) + "...";
+				text = text.substring(0, 200) + "...";
 			}
 		}
 		return text;
 	}
-	return ""; // Повертаємо порожній рядок, якщо <p> не знайдено
+	return "";
 };
 
 const displayResults = (results) => {
-	searchResultsDiv.innerHTML = ""; // Clear previous results
+	searchResultsDiv.innerHTML = "";
+
+	searchResultsDivWrapper.style.display = "block";
 	if (results.length === 0) {
 		searchResultsDiv.innerHTML = "<p>No results found.</p>";
 		return;
@@ -399,11 +374,35 @@ const displayResults = (results) => {
 	searchResultsDiv.innerHTML = resultsHTML;
 };
 
+const closeSearchResults = () => {
+	searchResultsDiv.innerHTML = "";
+	searchResultsDivWrapper.style.display = "none";
+	searchInput.value = "";
+};
+
 const handleSearch = () => {
 	const searchText = searchInput.value;
 	if (searchText.trim() !== "") {
 		const results = findTextInSections(searchText);
 		displayResults(results);
+		searchResultsDiv.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", function (e) {
+				e.preventDefault();
+				let targetId = this.getAttribute("href");
+				let targetElement = document.querySelector(targetId);
+				if (targetElement) {
+					currentSectionInView = targetElement;
+
+					targetElement.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
+				}
+				setTimeout(() => {
+					closeSearchResults();
+				}, 500);
+			});
+		});
 	} else {
 		searchResultsDiv.innerHTML = "<p>Please enter a search term.</p>";
 	}
@@ -415,3 +414,4 @@ searchInput.addEventListener("keypress", (event) => {
 		handleSearch();
 	}
 });
+closeSearchResultsBtn.addEventListener("click", closeSearchResults);
