@@ -11,10 +11,11 @@
 	--disabled-color: rgb(148, 148, 148);
 	--section-color: rgb(242, 241, 244);
 	--sectionEven-color: rgba(119, 196, 255, 0.16);
+	--close-btn-red: rgb(255, 18, 18);
 }
 
 html.dark {
-	--main-color: rgba(255, 255, 255, 0.868);
+	--main-color: rgba(255, 255, 255, 0.932);
 	--bg-light-white: rgb(16, 40, 64);
 	--bg-color: rgb(1, 57, 113);
 	--bright-bg: rgba(201, 222, 242, 0.23);
@@ -60,15 +61,14 @@ body {
 
 * {
 	box-sizing: border-box;
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
-		margin: 0;
-	}
 }
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+}
 .header {
 	display: flex;
 
@@ -96,10 +96,10 @@ body {
 	height: 100%;
 	display: flex;
 	align-items: center;
+}
 
-	a {
-		animation: slide-in-right 0.6s ease-out 0.7s both;
-	}
+.header-left-wrapper a {
+	animation: slide-in-right 0.6s ease-out 0.7s both;
 }
 @media screen and (min-width: 768px) {
 	.header-left-wrapper {
@@ -120,6 +120,12 @@ body {
 @media screen and (min-width: 1200px) {
 	.header a {
 		scale: 1.15;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header a {
+		scale: 1.3;
 	}
 }
 
@@ -221,6 +227,11 @@ body {
 		scale: 1;
 	}
 }
+@media screen and (min-width: 1200px) {
+	.theme-checkbox-label {
+		scale: 1.2;
+	}
+}
 .theme-checkbox-label svg {
 	transition: transform 0.4s ease;
 }
@@ -238,15 +249,13 @@ body {
 	border-radius: 50%;
 	transition: transform 0.2s linear;
 }
-.theme-checkbox-label {
-	svg {
-		width: 16px;
-		height: 16px;
-	}
+.theme-checkbox-label svg {
+	width: 16px;
+	height: 16px;
 }
 
 .theme-checkbox:checked + .theme-checkbox-label .ball {
-	transform: translateX(24px);
+	transform: translateX(22px);
 }
 
 .backToStart-btn:not(.disabled):hover .logout-tooltip-text {
@@ -437,13 +446,12 @@ body {
 }
 
 .sidebar-hide #sidebar-toggleButton {
-	background-color: transparent;
 	width: 1.875rem;
 	overflow: hidden;
-	span {
-		width: 0px;
-		opacity: 0;
-	}
+}
+.sidebar-hide #sidebar-toggleButton span {
+	width: 0px;
+	opacity: 0;
 }
 
 .sidebar-hide #arrowIcon {
@@ -651,8 +659,9 @@ body {
 }
 
 #search-input[type="text"] {
+	border-radius: 8px;
 	width: 100%;
-	height: 3rem;
+	height: 2.6rem;
 	font-size: 1.575rem;
 	line-height: 1;
 }
@@ -757,18 +766,13 @@ body {
 .search-results-close-btn {
 	scale: 1.3;
 	position: absolute;
-	top: 2%;
-	right: 4.5%;
-	color: red;
+	top: 1rem;
+	right: 0.8rem;
+	color: var(--close-btn-red);
 	font-size: 1.1rem;
 	z-index: 1;
 }
 
-@media screen and (min-width: 768px) {
-	.search-results-close-btn {
-		right: 2%;
-	}
-}
 #search-results {
 	max-height: 25.5rem;
 	overflow-y: auto;
@@ -824,7 +828,7 @@ body {
 	overflow-x: hidden;
 	min-height: 100vh;
 	padding: 8rem 0.5rem 0.5rem 0.5rem;
-	/* scroll-margin-top: 8rem; */
+	border-radius: 8px;
 
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1),
 		2px 0 4px rgba(0, 0, 0, 0.1), -2px 0 4px rgba(0, 0, 0, 0.1);
@@ -836,22 +840,21 @@ body {
 	justify-content: space-between;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	#content section {
 		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-right: 1.5rem;
 	}
 }
 @media screen and (min-width: 1200px) {
 	#content section {
 		padding-left: 1.2rem;
-		padding-right: 1.2rem;
 	}
 }
 @media screen and (min-width: 1440px) {
 	#content section {
 		padding-left: 1.4rem;
-		padding-right: 1.4rem;
+		padding-right: 1.7rem;
 	}
 }
 
@@ -922,7 +925,7 @@ body {
 }
 
 .sidebar-hide #content h2 {
-	padding-left: 0.4rem;
+	/* padding-left: 0.4rem; */
 }
 
 #content h2 {
@@ -939,7 +942,8 @@ body {
 	font-size: 1.7rem;
 }
 
-#content h3 {
+#content h3,
+#content h4 {
 	text-align: center;
 	text-transform: none;
 }
@@ -1160,28 +1164,36 @@ table td {
 	}
 }
 
+.section-break-container {
+	position: relative;
+	width: 100%;
+}
+
 .section-break-3 {
+	overflow: visible;
+
 	background-color: var(--main-color);
 	border: 0;
-	border-top: 1px solid var(--main-color);
 	height: 1px;
-	margin: 1rem auto;
-	text-align: center;
+	margin: 1rem 0;
 	width: 100%;
+}
 
-	&:before {
-		background-color: var(--bg-color);
-		color: darken(var(--main-color), 20%);
-		content: "\25C9";
-		display: inline-block;
+.sidebar-hide .section-break-icon {
+	transform: translateX(-50%);
+	left: 50%;
+}
 
-		left: 50%;
-		line-height: 1;
-		padding: 0 0.5rem;
-		text-rendering: geometricPrecision;
-		transform: translateY(-53%);
-		z-index: 1;
-	}
+.section-break-icon {
+	scale: 0.5;
+	position: absolute;
+	left: 50%;
+	top: -0.5rem;
+	transform: translateX(-50%);
+	background-color: var(--bg-light-white);
+	padding: 0 0.5rem;
+	z-index: 1;
+	color: var(--main-color);
 }
 
 /* !!! classes and keyframes for IntersectionObserver animations */
@@ -1333,12 +1345,12 @@ table td {
 	}
 }
 
-h2.in-view {
+h2.in-view,
+h4.in-view {
 	animation: slide-in-right 0.6s ease-out both;
 }
 
 h3.in-view,
-h4.in-view,
 #content strong.in-view {
 	animation: slide-in-left 0.6s ease-out both;
 }

@@ -337,7 +337,7 @@ const findTextInSections = (searchText) => {
 };
 
 const getClosestText = (section, searchText) => {
-	console.log(section);
+	// console.log(section);
 	const p = section.querySelector("p");
 	if (p) {
 		let text = p.textContent.trim();
