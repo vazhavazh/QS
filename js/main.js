@@ -284,7 +284,7 @@ const tags = document.querySelectorAll(
 	 #content section h2,
 	 #content section h3,
 	 #content h4,
-	 #about #logo, 
+	 #about .logo, 
 	 #content section p,
 	 #content section ul,
 	 #content section ol,
