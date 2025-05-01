@@ -1113,10 +1113,12 @@ table td {
 	word-break: break-word;
 	max-width: 11rem;
 }
-
+.sidebar-hide .title-line h3 span {
+	max-width: 95%;
+}
 @media screen and (min-width: 768px) {
 	.title-line h3 span {
-		max-width: none;
+		max-width: 100%;
 	}
 }
 
@@ -1181,9 +1183,8 @@ table td {
 	background-color: var(--main-color);
 	border: 0;
 	height: 1px;
-	
+
 	width: 100%;
-	
 }
 
 .section-break-icon {
