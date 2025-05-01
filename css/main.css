@@ -423,8 +423,7 @@ h5 {
 .buttonPlus:hover,
 .backToStart-btn:not(.disabled):hover,
 .previous-btn:not(.disabled):hover,
-.next-btn:not(.disabled):hover
- {
+.next-btn:not(.disabled):hover {
 	background-color: var(--bright-bg);
 	transform: scale(1.02);
 }
@@ -771,7 +770,6 @@ h5 {
 	position: relative;
 }
 .search-results-close-btn {
-	
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
@@ -781,7 +779,6 @@ h5 {
 }
 .search-results-close-btn:hover {
 	background-color: var(--bright-bg);
-	
 }
 #search-results {
 	max-height: 25.5rem;
@@ -1103,6 +1100,11 @@ table td {
 	margin-bottom: 1rem;
 	text-align: center;
 }
+@media screen and (max-width: 768px) {
+	.sidebar-hide .title-line {
+		padding-right: 0.7rem;
+	}
+}
 
 .title-line h3 {
 	margin: 0;
@@ -1117,7 +1119,7 @@ table td {
 	max-width: 11rem;
 }
 .sidebar-hide .title-line h3 span {
-	max-width: 95%;
+	max-width: 100%;
 }
 @media screen and (min-width: 768px) {
 	.title-line h3 span {
