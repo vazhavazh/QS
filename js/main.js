@@ -5,8 +5,10 @@ let currentSectionInView = null; // will be used when open or close sidebar, foc
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("change", () => {
 	document.documentElement.classList.toggle("dark");
-	const isDark = document.documentElement.classList.contains("dark");
-	localStorage.setItem("theme", isDark ? "dark" : "light");
+	localStorage.setItem(
+		"theme",
+		document.documentElement.classList.contains("dark") ? "dark" : "light"
+	);
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -17,20 +19,21 @@ window.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-// SIDEBAR ANCHORS ==============
+// SIDEBAR ANCHORS
 
-document.querySelectorAll("#sidebar a").forEach((link) => {
-	link.addEventListener("click", function (e) {
+const scrollToSection = (targetElement) => {
+	if (targetElement) {
+		currentSectionInView = targetElement;
+		targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
+};
+
+document.querySelector("#sidebar").addEventListener("click", (e) => {
+	if (e.target.tagName === "A") {
 		e.preventDefault();
-		let targetId = this.getAttribute("href");
-		let targetElement = document.querySelector(targetId);
-
-		if (targetElement) {
-			currentSectionInView = targetElement;
-
-			targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-		}
-	});
+		const targetElement = document.querySelector(e.target.getAttribute("href"));
+		scrollToSection(targetElement);
+	}
 });
 
 // SIDEBAR OPEN ========================
@@ -192,9 +195,7 @@ nextTopicBtn.addEventListener("click", () => {
 	}
 });
 
-backToStartBtn.classList.add("disabled");
-previousTopicBtn.classList.add("disabled");
-window.addEventListener("scroll", () => {
+const navigationBtnSwitcher = () => {
 	const currentSectionIndex = Array.from(sections).findLastIndex(
 		(section) => section.getBoundingClientRect().top <= window.innerHeight / 2
 	);
@@ -212,7 +213,10 @@ window.addEventListener("scroll", () => {
 	if (currentSectionIndex < sections.length - 1) {
 		nextTopicBtn.classList.remove("disabled");
 	}
-});
+};
+
+window.addEventListener("scroll", navigationBtnSwitcher);
+window.addEventListener("DOMContentLoaded", navigationBtnSwitcher);
 
 // FAQ DROPDOWN ============================ //
 
@@ -337,8 +341,9 @@ const findTextInSections = (searchText) => {
 };
 
 const getClosestText = (section, searchText) => {
-	// console.log(section);
+	if (!section) return "";
 	const p = section.querySelector("p");
+	if (!p) return "";
 	if (p) {
 		let text = p.textContent.trim();
 
@@ -392,14 +397,7 @@ const handleSearch = () => {
 				e.preventDefault();
 				let targetId = this.getAttribute("href");
 				let targetElement = document.querySelector(targetId);
-				if (targetElement) {
-					currentSectionInView = targetElement;
-
-					targetElement.scrollIntoView({
-						behavior: "smooth",
-						block: "start",
-					});
-				}
+				scrollToSection(targetElement);
 				setTimeout(() => {
 					closeSearchResults();
 				}, 800);

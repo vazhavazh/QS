@@ -668,6 +668,8 @@ h5 {
 	height: 2.6rem;
 	font-size: 1.575rem;
 	line-height: 1;
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
 }
 
 #search-input[type="text"]::placeholder {
