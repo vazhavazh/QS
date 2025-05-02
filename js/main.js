@@ -94,46 +94,43 @@ const sideBarLogbookDropDown = document.querySelector(
 const sideBarManagementBoardDropDow = document.querySelector(
 	".side-bar__sub-topic.mb-management-board"
 );
+
 const mainSidebarList = document.querySelector(".main-sidebar-list");
 const firstMainLink = document.querySelector(".first_main_sidebar_link");
 const secondMainLink = document.querySelector(".second_main_sidebar_link");
+let ticking = false;
 
-let currentActiveId = null;
-
-const observerScroll = new IntersectionObserver(
-	(entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				const sectionId = entry.target.id;
-
-				if (sectionId !== currentActiveId) {
-					currentActiveId = sectionId;
-					updateSidebar(sectionId);
-				}
-			}
+window.addEventListener("scroll", () => {
+	if (!ticking) {
+		window.requestAnimationFrame(() => {
+			handleScroll();
+			ticking = false;
 		});
-	},
-	{
-		root: null, 
-		rootMargin: "0px 0px -50% 0px", 
-		threshold: 0,
+		ticking = true;
 	}
-);
+});
+const handleScroll = () => {
+	let currentSectionId = "";
 
-sections.forEach((section) => observerScroll.observe(section));
+	for (let i = sections.length - 1; i >= 0; i--) {
+		const sectionTop = sections[i].getBoundingClientRect().top;
+		if (sectionTop <= window.innerHeight / 2) {
+			currentSectionInView = sections[i];
+			currentSectionId = sections[i].id;
+			break;
+		}
+	}
 
-function updateSidebar(currentSectionId) {
 	document
 		.querySelectorAll(".side-bar__sub-topic.openDropDown")
 		.forEach((el) => {
 			if (
-				el !== sideBarLogbookDropDown &&
+				el !== sideBarLogbookDropDown ||
 				el !== sideBarManagementBoardDropDow
 			) {
 				closeSideBarItem(el);
 			}
 		});
-
 	if (currentSectionId === "mb-management-board") {
 		openSideBarItem(sideBarManagementBoardDropDow);
 	}
@@ -141,32 +138,31 @@ function updateSidebar(currentSectionId) {
 		openSideBarItem(sideBarLogbookDropDown);
 	}
 
-	
 	sidebarItems.forEach((li) => {
+		li.classList.remove("active");
 		const link = li.querySelector("a");
-		const isActive = link.hash === "#" + currentSectionId;
-		li.classList.toggle("active", isActive);
+		if (link.hash === "#" + currentSectionId) {
+			const currentDropDown = li.parentElement;
 
-		if (isActive) {
-			const parent = li.parentElement;
-			if (parent !== mainSidebarList) {
+			if (currentDropDown !== mainSidebarList) {
 				document
 					.querySelectorAll(".side-bar__sub-topic.openDropDown")
 					.forEach((el) => {
-						if (el !== parent) closeSideBarItem(el);
+						if (el !== currentDropDown) {
+							closeSideBarItem(el);
+						}
 					});
-				openSideBarItem(parent);
+				openSideBarItem(currentDropDown);
 			}
+
+			firstMainLink.classList.toggle("active", link.hash === "#about");
+			secondMainLink.classList.toggle("active", link.hash === "#general-info");
+
+			li.classList.add("active");
 		}
 	});
-
-	firstMainLink.classList.toggle("active", currentSectionId === "about");
-	secondMainLink.classList.toggle(
-		"active",
-		currentSectionId === "general-info"
-	);
-}
-
+};
+window.addEventListener("scroll", handleScroll);
 
 // CONTENT NAVIGATION BUTTONS ====================================
 
