@@ -1102,7 +1102,7 @@ table td {
 }
 @media screen and (max-width: 768px) {
 	.sidebar-hide .title-line {
-		padding-right: 2rem;
+		padding-right: 1.5rem;
 	}
 }
 
