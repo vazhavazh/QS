@@ -1102,7 +1102,7 @@ table td {
 }
 @media screen and (max-width: 768px) {
 	.sidebar-hide .title-line {
-		padding-right: 0.7rem;
+		padding-right: 2.5rem;
 	}
 }
 
@@ -1392,12 +1392,12 @@ table td {
 
 h2.in-view,
 h4.in-view {
-	animation: slide-in-right 0.6s ease-out both;
+	animation: slide-in-right 0.7s ease-out both;
 }
 
 h3.in-view,
 #content strong.in-view {
-	animation: slide-in-left 0.6s ease-out both;
+	animation: slide-in-left 0.7s ease-out both;
 }
 
 #about .logo.in-view {
@@ -1408,7 +1408,7 @@ h3.in-view,
 #content section ul.in-view,
 #content section ol.in-view,
 #content img.in-view {
-	animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+	animation: text-focus-in 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 #content section .info.in-view,
