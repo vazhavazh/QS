@@ -28,6 +28,11 @@ html.dark {
 	--close-btn-red: rgb(255 0 0);
 }
 
+html,
+body {
+	height: 100%;
+}
+
 @media screen and (min-width: 768px) {
 	html {
 		font-size: 18px;
@@ -321,7 +326,6 @@ h5 {
 }
 @media screen and (min-width: 1024px) {
 	.nav-btn-wrapper {
-		
 		right: 1.2%;
 	}
 }
