@@ -1348,14 +1348,16 @@
 								The deviation identification stage. During this stage the ship
 								performs swinging according to corresponding instructions and
 								provides deviation data of the magnetic compass at present
-								condition.If residual deviation within 3° in vessels of 500 or more gross tonnage and,
-								 4° in vessels below 500 gross tonnage, then no additional adjustment is needed (according to ISO 25862:2019(E)).
+								condition.If residual deviation within 3° in vessels of 500 or
+								more gross tonnage and, 4° in vessels below 500 gross tonnage,
+								then no additional adjustment is needed (according to ISO
+								25862:2019(E)).
 							</li>
 							<li>
 								The adjustment stage. At this stage vessel's staff is provided
-								with guidance for second maneuvering and movement the correcting tools
-								for adjustment the compass. Upon successful completion of the
-								deviation adjustment procedure, an electronic document:
+								with guidance for second maneuvering and movement the correcting
+								tools for adjustment the compass. Upon successful completion of
+								the deviation adjustment procedure, an electronic document:
 								"Deviation Card" is issued, which can be downloaded to your
 								device and printed.
 							</li>
@@ -1461,11 +1463,16 @@
 								of the compass installed on the vessel.
 							</li>
 							<p class="info">
-								This information should be taken from the label on the compass
-								bowl. For example: Tokyo Keiki SH-165, 23321.<br />
+								Serial number should be taken from the
+								<strong>label</strong> on the compass bowl (<strong
+									>not from binnacle</strong
+								>). For example: Tokyo Keiki SH-165, N13724.<br />
 								You will be asked to provide these details separately during the
 								procedure.
 							</p>
+							<img
+								src="images/compass-bowl-label.jpg"
+								alt="compass-bowl-label" />
 							<li>Are there any bubbles inside the compass bowl?</li>
 							<li>
 								Does the compass card move freely and smoothly without getting
@@ -1477,8 +1484,9 @@
 
 						<p class="note">
 							After completing the maneuvers and adjustments, you will need to
-							upload screenshots of the maneuver from the ECDIS and photos of
-							the new positions of the correcting tools.
+							upload screenshots of the maneuver from the ECDIS/Radar screen
+							with the track, date and time of the vessel's performed maneuver
+							and photos of the new positions of the correcting tools.
 						</p>
 					</section>
 					<div class="section-break-container">
@@ -1839,9 +1847,13 @@
 									alt="" />
 							</li>
 							<li>
-								Download and print the compass instructions provided by
-								<span class="id">I-Deviator</span>, it will guide you thru
-								necessary corrective action. .
+								Download and print the compass instruction provided by
+								<span class="id">I-Deviator</span>, according to your compass
+								manufacturer, it will guide you through necessary corrective
+								action.
+								<br />
+								(How to make a photo and determine the correct placement of the
+								correcting magnets or/and soft iron.)
 								<br />
 								<img
 									src="images/download-compass-manual.png"
@@ -1893,16 +1905,18 @@
 						<p>
 							<strong>1. B and C compensation magnets.</strong><br />
 							The form is divided into three scales:<br />
-							- Fore-and-aft Port Side magnets;<br />
-							- Fore-and-aft Starboard Side magnets;<br />
-							- Athwartship magnets;<br /><br />
+							- Fore-and-aft Port Side magnets (alongside vessel's
+							centerline);<br />
+							- Fore-and-aft Starboard Side magnets (alongside vessel's
+							centerline);<br />
+							- Athwartship magnets (perpendicular to vessel's centerline);<br /><br />
 							<img
 								src="images/b-correctors-form.png"
 								alt="" />
 
-							You can enter the required number of magnets, specify their
-							position on the scale and the direction the red pole of the magnet
-							is facing.<br />
+							You can enter the required number of magnets, specify their slot
+							positions on the scale, and indicate the direction each magnet's
+							red pole is facing.<br />
 							Use the buttons to add and remove magnets on the scale.
 							<br />
 							<img
@@ -2041,13 +2055,14 @@
 							Set the vessel on the proposed Magnetic heading and after 2-3
 							minutes input the corresponding True heading in the appropriate
 							box. Also, enter the variation in the respective field. The
-							variation for each course can be entered separately.
+							variation will be calculated automatically based on the vessel's
+							provided position.
 						</p>
 
 						<p class="info">
-							In case deviation values on each of 4 cardinal and 4
-							inter-cardinal heading turned out to be less than +/-3.0 degrees,
-							new Deviation Card will be issued without additional adjustment.
+							If the deviation values on each of the four cardinal and four
+							intercardinal headings are within ±3.0 degrees, a new Deviation
+							Card will be issued without additional adjustment.
 						</p>
 
 						<img
@@ -2090,10 +2105,11 @@
 							<h3><span>Instructions</span></h3>
 						</div>
 						<p>
-							If deviations above the norm are detected as a result of the
+							
+							If deviation values on some directions are more than limited ±3.0 as a result of the
 							maneuvers, <span class="id">I-Deviator</span> will provide
 							instructions for moving the correctors and details for carrying
-							out additional maneuvers.
+							out <strong>additional</strong> maneuvers.
 						</p>
 
 						<p class="note">
@@ -2371,7 +2387,10 @@
 							<div class="faq-item">
 								<h5 class="faq-item__question">
 									Q. Why each measured deviation value may show "+" or "-" sign?
+									
 								</h5>
+								<br />
+								<br />
 								<div class="faq-item__answer">
 									A. Among various reasons main are:<br />
 									<ul>
